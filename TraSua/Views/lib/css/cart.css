@@ -1,0 +1,48 @@
+	table, th, td {
+		/*border: 1px solid red;*/
+
+	}
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+	}
+	.fa-close {
+		padding       : 5px 7px;
+		border-radius : 50%;
+	}
+
+	th#quatity{
+		text-align: center;
+	}
+	th#amount, th#unit-price{
+		text-align: right;
+	}
+
+	td.remove-products{
+		vertical-align:middle !important;
+		text-align:center !important;
+		padding: 0px !important;
+	}
+	h4.product-name {
+		padding: 0px; margin: 0px;
+	}
+
+	/*Số lượng*/
+	table tr td:nth-child(4) {
+		vertical-align: middle; text-align: center;
+	}
+	table tr td:nth-child(4) input {
+		outline: none; border-radius: 20px; border: 1px solid #aaa; padding: 10px; text-align: center;
+	}
+
+	table tr td:nth-child(5), table tr td:nth-child(6) {
+		vertical-align: middle; text-align: right;
+	}
+	
+	div.w3-right.w3-right-align input:nth-child(1), div.w3-right.w3-right-align input:nth-child(2){
+		border: 2px solid red;
+	}
+
+	div.w3-right.w3-right-align input:nth-child(3) {
+		border: 2px solid; padding-left: 30px; padding-right: 30px;
+	}

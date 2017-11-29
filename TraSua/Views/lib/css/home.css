@@ -1,0 +1,28 @@
+.six-kinds {
+	font-family: 'OpenSans-Regular';
+	width: 80%; height: auto; margin: 0 auto; background-color: red; overflow: hidden;
+}
+
+.l-item {
+	height   : 300px;
+	width    : 33.33333333333%;
+	float    : left;
+}
+
+.l-item:nth-child(-n+3) img.img-of-kind {
+	right: 30px;
+}
+
+.l-item img {
+	filter: grayscale(60%);
+	transition: all 1s;
+}
+
+.l-item:hover img {
+	filter: grayscale(0%);
+	transition: all 1s;
+}
+.l-item:hover img.img-of-kind {
+	transform: scale3d(1.2,1.2,1);
+	transition: all 1s;
+}

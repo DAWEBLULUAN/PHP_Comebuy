@@ -1,0 +1,26 @@
+@font-face {
+	font-family: Google-Inconsolata;
+	src        : url('../fonts/Inconsolata-Bold.ttf');
+	font-weight: bold;
+}
+@font-face {
+	font-family: Google-Inconsolata;
+	src        : url('../fonts/Inconsolata-Regular.ttf');
+}
+
+
+body, html {
+	height     : 100%;
+	font-family: Google-Inconsolata;
+}
+
+footer{
+	width: 100%;
+	background-color: rgba(0,0,0,0.89)!important;
+	color: #efe1e1 !important;
+}
+
+.social-icons >a {
+	background-color: #DADADA;
+	color: rgba(0,0,0,0.89);
+}
