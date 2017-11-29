@@ -46,9 +46,9 @@
 			<div class="six-kinds w3-hide-small">
 				<div class="l-item w3-display-container">
 					<a href="list.php">
-						<img src="img/bg-banner/bg-banner-1.jpg" alt="" class="w3-display-position bg-img">
+						<img src="View/img/bg-banner/bg-banner-1.jpg" alt="" class="w3-display-position bg-img">
 						<div class="w3-text-white w3-bold w3-large w3-uppercase w3-display-topleft w3-display-hover">teapresso</div>
-						<img src="img/bg-banner/teapresso.png" alt="" class="img-of-kind w3-display-position">
+						<img src="View/img/bg-banner/teapresso.png" alt="" class="img-of-kind w3-display-position">
 					</a>
 				</div>
 				<div class="l-item w3-display-container">
