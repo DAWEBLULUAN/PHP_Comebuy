@@ -46,44 +46,44 @@
 			<div class="six-kinds w3-hide-small">
 				<div class="l-item w3-display-container">
 					<a href="list.php">
-						<img src="img/bg-banner/bg-banner-1.jpg" alt="" class="w3-display-position bg-img">
+						<img src="Views/img/bg-banner/bg-banner-1.jpg" alt="" class="w3-display-position bg-img">
 						<div class="w3-text-white w3-bold w3-large w3-uppercase w3-display-topleft w3-display-hover">teapresso</div>
-						<img src="img/bg-banner/teapresso.png" alt="" class="img-of-kind w3-display-position">
+						<img src="Views/img/bg-banner/teapresso.png" alt="" class="img-of-kind w3-display-position">
 					</a>
 				</div>
 				<div class="l-item w3-display-container">
 					<a href="">
-						<img src="img/bg-banner/bg-banner-2.jpg" alt="" class="w3-display-position bg-img">
+						<img src="Views/img/bg-banner/bg-banner-2.jpg" alt="" class="w3-display-position bg-img">
 						<div class="w3-text-white w3-bold w3-large w3-uppercase w3-display-topleft w3-display-hover">milk tea</div>
-						<img src="img/bg-banner/tra-sua-tran-chau.png" alt="" class="img-of-kind w3-display-position">
+						<img src="Views/img/bg-banner/tra-sua-tran-chau.png" alt="" class="img-of-kind w3-display-position">
 					</a>
 				</div>
 				<div class="l-item w3-display-container">
 					<a href="">
-						<img src="img/bg-banner/bg-banner-3.jpg" alt="" class="w3-display-position bg-img">
+						<img src="Views/img/bg-banner/bg-banner-3.jpg" alt="" class="w3-display-position bg-img">
 						<div class="w3-text-white w3-bold w3-large w3-uppercase w3-display-topleft w3-display-hover">cream teaccino</div>
-						<img src="img/bg-banner/teaccino.png" alt="" class="img-of-kind w3-display-position">
+						<img src="Views/img/bg-banner/teaccino.png" alt="" class="img-of-kind w3-display-position">
 					</a>
 				</div>
 				<div class="l-item w3-display-container">
 					<a href="">
-						<img src="img/bg-banner/bg-banner-4.jpg" alt="" class="w3-display-position bg-img">
+						<img src="Views/img/bg-banner/bg-banner-4.jpg" alt="" class="w3-display-position bg-img">
 						<div class="w3-text-white w3-bold w3-large w3-uppercase w3-display-topright w3-display-hover">other tea</div>
-						<img src="img/bg-banner/latte.png" alt="" class="img-of-kind w3-display-position">
+						<img src="Views/img/bg-banner/latte.png" alt="" class="img-of-kind w3-display-position">
 					</a>
 				</div>
 				<div class="l-item w3-display-container">
 					<a href="">
-						<img src="img/bg-banner/bg-banner-5.jpg" alt="" class="w3-display-position bg-img">
+						<img src="Views/img/bg-banner/bg-banner-5.jpg" alt="" class="w3-display-position bg-img">
 						<div class="w3-text-white w3-bold w3-large w3-uppercase w3-display-topright w3-display-hover">fruit tea</div>
-						<img src="img/bg-banner/juice.png" alt="" class="img-of-kind w3-display-position">
+						<img src="Views/img/bg-banner/juice.png" alt="" class="img-of-kind w3-display-position">
 					</a>
 				</div>
 				<div class="l-item w3-display-container">
 					<a href="">
-						<img src="img/bg-banner/bg-banner-6.jpg" alt="" class="w3-display-position bg-img">
+						<img src="Views/img/bg-banner/bg-banner-6.jpg" alt="" class="w3-display-position bg-img">
 						<div class="w3-text-white w3-bold w3-large w3-uppercase w3-display-topright w3-display-hover">ice blended</div>
-						<img src="img/bg-banner/Ice-Blend.png" alt="" class="img-of-kind w3-display-position">
+						<img src="Views/img/bg-banner/Ice-Blend.png" alt="" class="img-of-kind w3-display-position">
 					</a>
 				</div>
 			</div>
@@ -116,7 +116,7 @@
 							<!-- Comment 1 -->
 							<div class="item">
 
-								<a href="details.php"><div class="comment_img w3-text-black"><img src="img/tea/1.png" alt=""></div></a>
+								<a href="details.php"><div class="comment_img w3-text-black"><img src="Views/img/tea/1.png" alt=""></div></a>
 								<!-- <div><a href="http://facebook.com">MARY JANE</a></div> -->
 
 								<div class="best_coffee_name">
@@ -133,7 +133,7 @@
 							<!-- Comment 2 -->
 							<div class="item">
 
-								<a href="index.php"><div class="comment_img"><img src="img/tea/2.png" alt=""></div></a>
+								<a href="index.php"><div class="comment_img"><img src="Views/img/tea/2.png" alt=""></div></a>
 								<!-- <div><a href="http://facebook.com">MARY JANE</a></div> -->
 
 								<div class="best_coffee_name">
@@ -150,7 +150,7 @@
 							<!-- Comment 3 -->
 							<div class="item">
 
-								<a href="index.php"><div class="comment_img"><img src="img/tea/3.png" alt=""></div></a>
+								<a href="index.php"><div class="comment_img"><img src="Views/img/tea/3.png" alt=""></div></a>
 								<!-- <div><a href="http://facebook.com">MARY JANE</a></div> -->
 
 								<div class="best_coffee_name">
@@ -166,7 +166,7 @@
 							
 							<div class="item">
 
-								<a href="index.php"><div class="comment_img"><img src="img/tea/4.png" alt=""></div></a>
+								<a href="index.php"><div class="comment_img"><img src="Views/img/tea/4.png" alt=""></div></a>
 								<!-- <div><a href="http://facebook.com">MARY JANE</a></div> -->
 
 								<div class="best_coffee_name">
@@ -181,7 +181,7 @@
 
 							<div class="item">
 
-								<a href="index.php"><div class="comment_img"><img src="img/tea/5.png" alt=""></div></a>
+								<a href="index.php"><div class="comment_img"><img src="Views/img/tea/5.png" alt=""></div></a>
 								<!-- <div><a href="http://facebook.com">MARY JANE</a></div> -->
 
 								<div class="best_coffee_name">
