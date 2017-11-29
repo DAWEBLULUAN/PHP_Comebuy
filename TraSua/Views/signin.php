@@ -1,5 +1,5 @@
 <?php
-	$signin_css = "<link rel='stylesheet' href='lib/css/signin.css'>";
+	$signin_css = "<link rel='stylesheet' href='Views/lib/css/signin.css'>";
 	require 'parts/header.php';
 ?>
 
