@@ -1,5 +1,5 @@
 <?php
-	$cart_css = "<link rel='stylesheet' href='lib/css/cart.css'>";
+	$cart_css = "<link rel='stylesheet' href='Views/lib/css/cart.css'>";
 
 	require 'parts/header.php';
 ?>
@@ -52,7 +52,7 @@
 	    </thead>
 	    <tr>
 	    	<td class="remove-products"><a href=""><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
-	    	<td width="100px"><img src="img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
+	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
 	      <td>
 	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
 	      	<span>Size: </span><span>350ml</span> <br>
@@ -64,7 +64,7 @@
 
 	    <tr>
 	    	<td class="remove-products"><a href=""><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
-	    	<td width="100px"><img src="img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
+	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
 	      <td>
 	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
 	      	<span>Size: </span><span>350ml</span> <br>
@@ -76,7 +76,7 @@
 
 	    <tr>
 	    	<td class="remove-products"><a href=""><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
-	    	<td width="100px"><img src="img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
+	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
 	      <td>
 	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
 	      	<span>Size: </span><span>350ml</span> <br>

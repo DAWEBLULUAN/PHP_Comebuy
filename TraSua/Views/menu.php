@@ -71,7 +71,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -96,7 +96,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -121,7 +121,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -172,7 +172,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -197,7 +197,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -222,7 +222,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -281,7 +281,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -306,7 +306,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -331,7 +331,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -383,7 +383,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -408,7 +408,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -433,7 +433,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -494,7 +494,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -519,7 +519,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -544,7 +544,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -596,7 +596,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -621,7 +621,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
@@ -646,7 +646,7 @@
 
 								<div class="menu_img">
 
-									<img src="img/freddie-marriage-168317.png" alt="coffe cup">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
 										<li class="item_name">Regular Coffee</li>
