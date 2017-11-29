@@ -7,7 +7,7 @@
 			<!-- Footer Logo -->
 			<div class="logo foot col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<a href="/Project/TraSua">
-					<img src="img/icons/comebuy-logo1.png" alt="comebuy-logo1.png">
+					<img src="Views/img/icons/comebuy-logo1.png" alt="comebuy-logo1.png">
 				</a>
 				<a href="/Project/TraSua">
 					<div class="site_name">COMEBUY</div>
@@ -20,7 +20,7 @@
 				
 				<!-- Menu -->
 				<ul class="menu foot">
-					<?php include 'parts/menu-items.php'; ?>
+					<?php include 'Views/parts/menu-items.php'; ?>
 				</ul>
 				<!-- End Menu -->
 
@@ -109,9 +109,9 @@
 
 </div>
 	
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/scripts.min.js"></script>
-	<script src="js/my-js.js"></script>
+	<script src="Views/lib/js/jquery-3.1.1.min.js"></script>
+	<script src="Views/lib/js/scripts.min.js"></script>
+	<script src="Views/lib/js/my-js.js"></script>
 	<script>
 		var clock = $('.countdown').FlipClock(3600 * 24 * 5, {
 			clockFace: 'DailyCounter',

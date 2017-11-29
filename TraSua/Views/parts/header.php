@@ -22,10 +22,10 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
 	<link rel="icon" type="image/png" href="img/icons/favicon.png" sizes="32x32">
-  <link rel="stylesheet" href="lib/css/main.min.css">
-  <link rel="stylesheet" href="lib/css/W3/W3.css">
-	<link rel="stylesheet" href="lib/css/FA/font-awesome.css">
-	<link rel="stylesheet" href="lib/css/home.css">
+  <link rel="stylesheet" href="Views/lib/css/main.min.css">
+  <link rel="stylesheet" href="Views/lib/css/W3/W3.css">
+	<link rel="stylesheet" href="Views/lib/css/FA/font-awesome.css">
+	<link rel="stylesheet" href="Views/lib/css/home.css">
 	<?php 
 		if(isset($cart_css))
 			echo $cart_css;

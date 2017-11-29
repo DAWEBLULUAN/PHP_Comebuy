@@ -9,7 +9,7 @@
 		<!-- Menu for small devices -->
 		<nav id="my-menu">
 			<ul>
-				<?php include 'parts/menu-items.php'; ?>
+				<?php include 'Views/parts/menu-items.php'; ?>
 			</ul>
 		</nav>
 		<!-- End Menu for small devices -->
@@ -17,7 +17,7 @@
 		<!-- Logo -->
 		<div class="logo">
 			<a href="/Project/TraSua">
-				<img src="img/icons/comebuy-logo1.png" alt="comebuy-logo1.png">
+				<img src="Views/img/icons/comebuy-logo1.png" alt="comebuy-logo1.png">
 			</a>
 			<a href="/Project/TraSua">
 				<div class="site_name">COMEBUY</div>
@@ -31,7 +31,7 @@
 	<div class="col-lg-7 col-md-9 col-sm-12 hidden-xs">
 
 		<ul class="menu">
-			<?php include 'parts/menu-items.php'; ?>
+			<?php include 'Views/parts/menu-items.php'; ?>
 		</ul>
 
 	</div>
