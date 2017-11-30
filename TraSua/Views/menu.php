@@ -8,6 +8,49 @@
 
 			<header class="menu_page_header">
 
+
+
+				<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+
 				<div class="container">
 
 					<!-- Navigation Menu here -->
@@ -29,650 +72,107 @@
 					<!--End Caption-->
 
 				</div>
-
+				<!--  -->
+				
+				<!--  -->
 			</header>
-
 		</div>
 		<!-- END HEADER -->
-
 		<!-- CONTENT -->
 		<div id="my-content">
 
 			<div class="main_menu">
 				
+				<div class="container">
+					<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Tab1')">Tab1</button>
+  <button class="tablinks" onclick="openCity(event, 'Tab2')">Tab2</button>
+  <button class="tablinks" onclick="openCity(event, 'Tab3')">Tab3</button>
+   <button class="tablinks" onclick="openCity(event, 'Tab4')">Tab4</button>
+  <button class="tablinks" onclick="openCity(event, 'Tab5')">Tab5</button>
+  <button class="tablinks" onclick="openCity(event, 'Tab6')">Tab6</button>
+</div>
+
+<!-- Tab 1 -->
+<div id="Tab1" class="tabcontent">
+<!--  -->
+<div class="container">
+
+<?php 
+for ($i=0; $i < 10; $i++) { 
+ ?>
+<div style="float: left;width: 23%;margin:1%;margin-top: 5%;">
+									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
+
+									<ul>
+										<li class="item_name">Regular Coffee</li>
+										<li class="item_description">Coffee with vanila</li>
+									</ul>
+
+									<div class="line">. . . . . . . . .</div>
+									<!-- Prices -->
+									<div class="price">20.00<sup>$</sup>
+
+									<button type="button" class="btn btn-warning"> + </button>
+									</div>
+									<!-- End Prices -->
+									<br>							
+</div>
+<?php 
+}
+ ?>
+</div>
+  <!--  -->
+
+</div>
+<!-- End -Tab1 -->
+
+<div id="Tab2" class="tabcontent">
+  <h3>Tab2</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tab3" class="tabcontent">
+  <h3>Tab3</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Tab4" class="tabcontent">
+  <h3>Tab4</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Tab5" class="tabcontent">
+  <h3>Tab5</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Tab6" class="tabcontent">
+  <h3>Tab6</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+     
+					
+				</div>
 				
-
-				<div class="container">
-
-					<!-- Hot Coffee section -->
-					<div class="col-lg-6 col-md-6 col-sm-6">
-
-						<!-- Tea presso caption -->
-						<div class="menu_caption page w3-uppercase">
-							TEA PRESSO
-						</div>
-						<!-- End Tea presso caption -->
-						
-						<!-- Filter -->
-						<div class="filter">
-							<ul>
-								<li><a href="#small">SMALL</a> |</li>
-								<li><a href="#medium">MEDIUM</a> |</li>
-								<li><a href="#large">LARGE</a></li>
-							</ul>
-						</div>
-						<!-- End Filter -->
-
-						<!-- Items -->
-						<div class="menu_items">
-							
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-
-						</div>
-						<!-- End Items -->
-
-					</div>
-
-					<div class="col-lg-6 col-md-6 col-sm-6">
-
-						<!-- Milk tea caption -->
-						<div class="menu_caption page w3-uppercase">
-							MILK TEA
-						</div>
-						<!-- End Milk tea caption -->
-
-						<!-- Filter -->
-						<div class="filter">
-							<ul>
-								<li><a href="#small_tea">SMALL</a> |</li>
-								<li><a href="#medium_tea">MEDIUM</a> |</li>
-								<li><a href="#large_tea">LARGE</a></li>
-							</ul>
-						</div>
-						<!-- End Filter -->
-
-						<div class="menu_items" id="ml">
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-						</div>
-
-					</div>
-					<!-- End Hot Coffee section -->
-
-				</div>
-
-
-				<!-- Cold Coffee section -->
-
-
-				<div class="container">
-					
-					<div class="col-lg-6 col-md-6 col-sm-6">
-						<!-- Regular Coffee caption -->
-						<div class="menu_caption page w3-uppercase">
-							CREAM TEACCINO
-						</div>
-						<!-- End Regular Coffee caption -->
-
-						<!-- Filter -->
-						<div class="filter">
-							<ul>
-								<li><a href="#small_tea">SMALL</a> |</li>
-								<li><a href="#medium_tea">MEDIUM</a> |</li>
-								<li><a href="#large_tea">LARGE</a></li>
-							</ul>
-						</div>
-						<!-- End Filter -->
-
-
-						<!-- Items -->
-						<div class="menu_items">
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-
-						</div>
-						<!-- End Items -->
-
-					</div>
-
-					<div class="col-lg-6 col-md-6 col-sm-6">
-						<!-- Other tea caption -->
-						<div class="menu_caption page w3-uppercase">
-							OTHER TEA
-						</div>
-						<!-- End Other tea caption -->
-
-						<!-- Filter -->
-						<div class="filter">
-							<ul>
-								<li><a href="#small_tea">SMALL</a> |</li>
-								<li><a href="#medium_tea">MEDIUM</a> |</li>
-								<li><a href="#large_tea">LARGE</a></li>
-							</ul>
-						</div>
-						<!-- End Filter -->
-
-
-						<!-- Items -->
-						<div class="menu_items" id="ml">
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-
-						</div>
-						<!-- End Items -->
-
-					</div>
-
-				</div>
-
-				<!-- End Cold Coffee section -->
-
-				<!-- Tea beverage section -->
-
-
-				<div class="container">
-					
-					<div class="col-lg-6 col-md-6 col-sm-6">
-						<!-- FRUIT TEA caption -->
-						<div class="menu_caption page">
-							FRUIT TEA
-						</div>
-						<!-- End FRUIT TEA caption -->
-
-						<!-- Filter -->
-						<div class="filter">
-							<ul>
-								<li><a href="#small_tea">SMALL</a> |</li>
-								<li><a href="#medium_tea">MEDIUM</a> |</li>
-								<li><a href="#large_tea">LARGE</a></li>
-							</ul>
-						</div>
-						<!-- End Filter -->
-
-
-						<!-- Items -->
-						<div class="menu_items">
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-
-						</div>
-						<!-- End Items -->
-
-					</div>
-
-					<div class="col-lg-6 col-md-6 col-sm-6">
-						<!-- ICE BLENDED caption -->
-						<div class="menu_caption page">
-							ICE BLENDED
-						</div>
-						<!-- End ICE BLENDED caption -->
-
-						<!-- Filter -->
-						<div class="filter">
-							<ul>
-								<li><a href="#small_tea">SMALL</a> |</li>
-								<li><a href="#medium_tea">MEDIUM</a> |</li>
-								<li><a href="#large_tea">LARGE</a></li>
-							</ul>
-						</div>
-						<!-- End Filter -->
-
-
-						<!-- Items -->
-						<div class="menu_items" id="ml">
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-							<!-- Item -->
-							<div class="menu_single_item">
-
-								<div class="menu_img">
-
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
-									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup></div>
-									<div class="price_medium">18.00<sup>$</sup></div>
-									<div class="price_small">20.00<sup>$</sup></div>
-									<!-- End Prices -->
-									<br>
-
-								</div>
-
-							</div>
-							<!-- End Item -->
-
-
-						</div>
-						<!-- End Items -->
-
-					</div>
-
-				</div>
 
 				<!-- End Cold Coffee section -->
 

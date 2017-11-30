@@ -20,7 +20,11 @@
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-
+<!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- End CSS - LU -->
 	<link rel="icon" type="image/png" href="img/icons/favicon.png" sizes="32x32">
   <link rel="stylesheet" href="Views/lib/css/main.min.css">
   <link rel="stylesheet" href="Views/lib/css/W3/W3.css">
