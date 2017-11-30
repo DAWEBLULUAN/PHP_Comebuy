@@ -18,7 +18,11 @@ class Model
 			//Bữa đặt lại mật khẩu trắng lỗi tung tóe -_-
 			//Lười google :))
 			//sửa dbname, sửa cái '' sau root
-			$this->conn = new PDO('mysql:host=localhost;dbname=nha_hang;charset=utf8', 'root', '');
+
+			//ten database cua tao(Lu) la : comebuy  
+
+
+			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', '');
 			// $this->conn->query('set names "utf8"');	
 		} catch (Exception $e) {
 			$e->getMessage();

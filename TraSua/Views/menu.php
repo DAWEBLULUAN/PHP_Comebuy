@@ -23,7 +23,7 @@ div.tab {
 /* Style the buttons inside the tab */
 div.tab button {
     background-color: inherit;
-    float: left;
+	float: left;
     border: none;
     outline: none;
     cursor: pointer;
@@ -101,25 +101,26 @@ div.tab button.active {
 <div class="container">
 
 <?php 
-for ($i=0; $i < 10; $i++) { 
+foreach ($san_pham as $sp) {
+	# code...
  ?>
-<div style="float: left;width: 23%;margin:1%;margin-top: 5%;">
+						<div style="float: left;width: 23%;margin:1%;margin-top: 5%;">
 									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
 
 									<ul>
-										<li class="item_name">Regular Coffee</li>
-										<li class="item_description">Coffee with vanila</li>
+										<li class="item_name"><?php echo $sp->ten_sp ?></li>
+									
 									</ul>
 
 									<div class="line">. . . . . . . . .</div>
 									<!-- Prices -->
-									<div class="price">20.00<sup>$</sup>
+									<div class="price"><?php echo $sp->gia_ban ?><sup>$</sup>
 
 									<button type="button" class="btn btn-warning"> + </button>
 									</div>
 									<!-- End Prices -->
 									<br>							
-</div>
+						</div>
 <?php 
 }
  ?>
