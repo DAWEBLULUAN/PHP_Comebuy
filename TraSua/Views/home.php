@@ -18,13 +18,13 @@
 
 						<div class="made_with_love col-lg-12 col-md-12 col-sm-12 col-xs-12">MADE WITH LOVE</div>
 
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sm-12"><img src="img/icons/like.png" alt="heart"></div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sm-12"><img src="Views/img/icons/like.png" alt="heart"></div>
 
 						<!--End-->
 
 						<!-- Phrase -->
 						<h1 class="title col-lg-12 col-md-12 col-sm-12 col-xs-12">GOOD TEA - GOOD DAY</h1>
-
+						
 						<div class="phrase col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							THE DAY BEGINS WITH TEA
 						</div>
