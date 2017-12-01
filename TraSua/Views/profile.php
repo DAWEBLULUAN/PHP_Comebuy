@@ -1,9 +1,10 @@
 <?php
-	$profile_css = "<link rel='stylesheet' href='lib/css/profile.css'>";
+	$profile_css = "<link rel='stylesheet' href='Views/lib/css/profile.css'>";
 	require 'parts/header.php';
 ?>
 <div class="header">
 	<div class="container">
+
 
 		<!-- Menu here -->
 		<?php include_once 'parts/body.navbar.php'; ?>
@@ -18,6 +19,13 @@
 	<div class="w3-col s12 m6">
 		
 		<div class="change-password">
+			<?php 
+				if (isset($username)) {
+					if($username != null)
+						echo $username;
+					else echo "haha";
+				} else echo "hic hic";
+			?>
 			<h3>Change password</h3>
 		  <form action="">
 

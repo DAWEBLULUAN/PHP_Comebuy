@@ -17,20 +17,20 @@
 	<div class="my-content">
 		<h1>Sign-in</h1><br>
 	  <div class="my-form" id="signin-form">
-		  <form action="">
+		  <form action="signin.php" method="POST">
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name="username" required>
 		      <span class="my-bar"></span>
 		      <label>Username</label>
 		    </div>
 		      
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name="password" required>
 		      <span class="my-bar"></span>
 		      <label>Password</label>
 		    </div>
 		    <div class="my-form-control">
-		    	<input type="checkbox" style="display: inline-block; width: auto; text-align: left">&nbsp;&nbsp;<span style="display: inline-block;">Remember me</span>
+		    	<input type="checkbox" name="remember_me" style="display: inline-block; width: auto; text-align: left">&nbsp;&nbsp;<span style="display: inline-block;">Remember me</span>
 		    </div>
 		    <div><a href="signup.php" id="signup-link">Sign up</a>&nbsp;&nbsp;&nbsp;<a href="">Forgot password</a></div>
 			  <br>
