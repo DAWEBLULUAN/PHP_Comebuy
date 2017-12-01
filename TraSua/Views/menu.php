@@ -18,6 +18,8 @@ div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+
+
 }
 
 /* Style the buttons inside the tab */
@@ -30,6 +32,7 @@ div.tab button {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
+    width: 16.66666%;
 }
 
 /* Change background color of buttons on hover */
@@ -65,15 +68,12 @@ div.tab button.active {
 						<div class="undertext menu col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							~ Taste our hot bavarages ~
 						</div>
-
 						<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 angle_down"><a href="#angle" class="angle"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
 
 					</div>
 					<!--End Caption-->
-
 				</div>
 				<!--  -->
-				
 				<!--  -->
 			</header>
 		</div>
@@ -84,15 +84,15 @@ div.tab button.active {
 			<div class="main_menu">
 				
 				<div class="container">
-					<p>Click on the buttons inside the tabbed menu:</p>
-
+				
+<!-- teapresso- milk tea - ceam teaccino- other tea- fruit tea - ice blended -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Tab1')">Tab1</button>
-  <button class="tablinks" onclick="openCity(event, 'Tab2')">Tab2</button>
-  <button class="tablinks" onclick="openCity(event, 'Tab3')">Tab3</button>
-   <button class="tablinks" onclick="openCity(event, 'Tab4')">Tab4</button>
-  <button class="tablinks" onclick="openCity(event, 'Tab5')">Tab5</button>
-  <button class="tablinks" onclick="openCity(event, 'Tab6')">Tab6</button>
+  <button class="tablinks" id="defaulOpen" onclick="openCity(event, 'Tab1')"><b>TEAPRESSO<b></button>
+  <button class="tablinks" onclick="openCity(event, 'Tab2')">MILK TEA</button>
+  <button class="tablinks" onclick="openCity(event, 'Tab3')">CREAM TEACCINO</button>
+   <button class="tablinks" onclick="openCity(event, 'Tab4')">OTHER TEA</button>
+  <button class="tablinks" onclick="openCity(event, 'Tab5')">FRUIT TEA</button>
+  <button class="tablinks" onclick="openCity(event, 'Tab6')">ICE BLENDED</button>
 </div>
 
 <!-- Tab 1 -->
@@ -104,19 +104,14 @@ div.tab button.active {
 foreach ($san_pham as $sp) {
 	# code...
  ?>
-						<div style="float: left;width: 23%;margin:1%;margin-top: 5%;">
-									<img src="Views/img/freddie-marriage-168317.png" alt="coffe cup">
-
-									<ul>
-										<li class="item_name"><?php echo $sp->ten_sp ?></li>
-									
-									</ul>
-
-									<div class="line">. . . . . . . . .</div>
+						<div style="float: left;width: 21.5%;margin:1%;margin-top: 5%;">
+									<center><img src="Views/img/freddie-marriage-168317.png" alt="coffe cup"></center>
+										<div><center><?php echo $sp->ten_sp ?></center></div>
+									<div class="line"><center>. . . . . . . . . . . . . . . . . . .</center></div>
 									<!-- Prices -->
-									<div class="price"><?php echo $sp->gia_ban ?><sup>$</sup>
-
+									<div class="price"><center><?php echo $sp->gia_ban ?><sup>đ</sup>
 									<button type="button" class="btn btn-warning"> + </button>
+									</center>
 									</div>
 									<!-- End Prices -->
 									<br>							
@@ -169,6 +164,8 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+ document.getElementById("defaulOpen").click();
 </script>
      
 					
