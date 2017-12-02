@@ -87,85 +87,36 @@ div.tab button.active {
 				
 <!-- teapresso- milk tea - ceam teaccino- other tea- fruit tea - ice blended -->
 <div class="tab">
-  <button class="tablinks" id="defaulOpen" onclick="openCity(event, 'Tab1')"><b>TEAPRESSO<b></button>
-  <button class="tablinks" onclick="openCity(event, 'Tab2')">MILK TEA</button>
-  <button class="tablinks" onclick="openCity(event, 'Tab3')">CREAM TEACCINO</button>
-   <button class="tablinks" onclick="openCity(event, 'Tab4')">OTHER TEA</button>
-  <button class="tablinks" onclick="openCity(event, 'Tab5')">FRUIT TEA</button>
-  <button class="tablinks" onclick="openCity(event, 'Tab6')">ICE BLENDED</button>
+  <button class="tablinks" id="defaultOpen" onclick="openCity(event,'LSP001')">TEAPRESSO</button>
+  <button class="tablinks" onclick="openCity(event,'LSP002')">MILK TEA</button>
+  <button class="tablinks" onclick="openCity(event,'LSP003')">CREAM TEACCINO</button>
+  <button class="tablinks" onclick="openCity(event,'LSP004')">OTHER TEA</button>
+  <button class="tablinks" onclick="openCity(event,'LSP005')">FRUIT TEA</button>
+  <button class="tablinks" onclick="openCity(event,'LSP006')">ICE BLENDED</button>
 </div>
-
-<!-- Tab 1 -->
-<div id="Tab1" class="tabcontent">
 <!--  -->
-<div class="container">
 
-<?php 
-foreach ($san_pham as $sp) {
-	# code...
- ?>
-						<div style="float: left;width: 21.5%;margin:1%;margin-top: 5%;">
-									<center><img src="Views/img/freddie-marriage-168317.png" alt="coffe cup"></center>
-										<div><center><?php echo $sp->ten_sp ?></center></div>
-									<div class="line"><center>. . . . . . . . . . . . . . . . . . .</center></div>
-									<!-- Prices -->
-									<div class="price"><center><?php echo $sp->gia_ban ?><sup>đ</sup>
-									<button type="button" class="btn btn-warning"> + </button>
-									</center>
-									</div>
-									<!-- End Prices -->
-									<br>							
-						</div>
-<?php 
-}
- ?>
-</div>
-  <!--  -->
+<!--  -->
+<div id="phan_trang"></div>
 
-</div>
-<!-- End -Tab1 -->
-
-<div id="Tab2" class="tabcontent">
-  <h3>Tab2</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tab3" class="tabcontent">
-  <h3>Tab3</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<div id="Tab4" class="tabcontent">
-  <h3>Tab4</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<div id="Tab5" class="tabcontent">
-  <h3>Tab5</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<div id="Tab6" class="tabcontent">
-  <h3>Tab6</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
 
 <script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
- document.getElementById("defaulOpen").click();
+	document.getElementById("defaultOpen").click(); // default click tab 1 
+	// 
+	function openCity(evt,maloaiF) {
+  	  var i, tablinks;
+ 	   tablinks = document.getElementsByClassName("tablinks");
+  	  for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active","");
+    	} evt.currentTarget.className += " active";
+// đoạn trên là hiệu ứng các thử ở menutop tab
+// đoạn dưới là ajax xài jquery
+  	 	 var loaisp = maloaiF;
+  	 	 var indexTrang =3;
+  	  $.get("phantrang_sp.php",{maloai:loaisp,indexT:indexTrang},function(data){
+  	  	$("#phan_trang").html(data);
+ 	   })
+	}
 </script>
      
 					

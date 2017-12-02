@@ -74,7 +74,8 @@ class Model
 
 
 	//Lấy 1 dòng
-	public function loadRow($option=array()) {
+	public function loadRow($option=array()) 
+	{
     if(!$option) {
       if(!$result = $this->execute())
           return false;
