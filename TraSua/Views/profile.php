@@ -20,11 +20,10 @@
 		
 		<div class="change-password">
 			<?php 
-				if (isset($username)) {
-					if($username != null)
-						echo $username;
-					else echo "haha";
-				} else echo "hic hic";
+				if(isset($_COOKIE["username"])) {
+					echo $_COOKIE["username"]." Cookie";
+				}
+				else echo $_SESSION["username"]." Session";
 			?>
 			<h3>Change password</h3>
 		  <form action="">
@@ -48,7 +47,7 @@
 		    </div>
 
 		    <div><input type="submit" class="w3-btn w3-block w3-red w3-hover-black" value="Change password"></div>
-
+				<div><a href="signout.php">Sign out</a></div>
 		  </form>
 	  </div>
 	</div>

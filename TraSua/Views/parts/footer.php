@@ -45,17 +45,17 @@
 			<!-- End Contact Us -->
 
 			<!-- Ask a question -->
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="col-sm-8 col-xs-12">
 
 				<div class="footer_captions mt">
 					ASK A QUESTION
 				</div>
-				<form action="">
-					<div class="input-group" style="margin-top: 30px !important;">
+				<form action="" class="">
+					<div class="input-group" style="margin-top: 20px !important;">
 						<input type="text" placeholder="Your E-Mail" class="question">
 						<div class="underline"></div>
 					</div>
-					<div class="input-group" style="margin-top: 30px !important;">
+					<div class="input-group" style="margin-top: 20px !important;">
 						<input type="text" placeholder="Your Message" class="question">
 						<div class="underline"></div>
 					</div>

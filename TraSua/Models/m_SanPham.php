@@ -12,7 +12,7 @@ class M_SanPham extends Model
 	{
 		$sql="select * from san_pham";
 		$this->setQuery($sql);
-		return $this->loadAllRows();
+		return $this->loadAllRows();	
 	}
 
 	public function Doc_mon_an_theo_ma_mon($mamon)
