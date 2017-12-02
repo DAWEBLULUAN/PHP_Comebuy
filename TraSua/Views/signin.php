@@ -17,15 +17,15 @@
 	<div class="my-content">
 		<h1>Sign-in</h1><br>
 	  <div class="my-form" id="signin-form">
-		  <form action="signin.php" method="POST">
-		    <div class="my-form-control">      
-		      <input type="text" name="username" required>
+		  <form action="account.php?route=signin" method="POST">
+		    <div class="my-form-control">    
+		      <input type="text" name="username" required value='<?php if(isset($_COOKIE["username"])) echo($_COOKIE["username"]) ?>'>
 		      <span class="my-bar"></span>
 		      <label>Username</label>
 		    </div>
 		      
 		    <div class="my-form-control">      
-		      <input type="text" name="password" required>
+		      <input type="text" name="password" required value='<?php if(isset($_COOKIE["password"])) echo $_COOKIE["password"] ?>'>
 		      <span class="my-bar"></span>
 		      <label>Password</label>
 		    </div>

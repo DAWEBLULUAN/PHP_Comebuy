@@ -1,7 +1,7 @@
 <?php 
-
-require "Controllers/NavigationController.php";
-$nav_c = new NavigationController();
-$nav_c->showHome();
+	session_start();
+	require "Controllers/NavigationController.php";
+	$nav_c = new NavigationController();
+	$nav_c->showHome();
 
  ?>

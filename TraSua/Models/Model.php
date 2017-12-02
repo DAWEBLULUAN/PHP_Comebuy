@@ -19,10 +19,12 @@ class Model
 			//Lười google :))
 			//sửa dbname, sửa cái '' sau root
 
-			//ten database cua tao(Lu) la : comebuy  
+			//ten database cua tao(Lu) la : comebuy
+			//database 2 đứa như nhau mà :v
 
 
-			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', '');
+			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', 'mysql');
+			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			// $this->conn->query('set names "utf8"');	
 		} catch (Exception $e) {
 			$e->getMessage();
@@ -86,6 +88,33 @@ class Model
     }
     return $result->fetch(PDO::FETCH_OBJ);
   }
+
+  public function checkIfAvailable($options=array()) {
+  	// $query = "SELECT id, ten_tk FROM tai_khoan WHERE ten_tk = ? AND mat_khau = ?";
+   //  $this->setQuery($query);
+    if(!$options) {
+      if(!$result = $this->execute())
+        return false;
+    }
+    else {
+      if(!$result = $this->execute($options))
+        return false;
+    }
+    return $result->fetch(PDO::FETCH_OBJ);
+
+    // $query = "SELECT id, ten_tk FROM tai_khoan WHERE ten_tk = ? AND mat_khau = ?";
+    // $this->setQuery($query);
+    // $a = $this->conn->prepare($query);
+    // $a->bindParam(1, $options[0]);
+    // $a->bindParam(2, $options[1]);
+    // $a->execute();
+    // $checkk = $a->fetch(PDO::FETCH_OBJ);
+    // // $option = array($_POST["username"], $_POST["password"]);
+    // return $checkk;
+    // return $this->loadRow($options);
+  }
+
+  
 
 }
 

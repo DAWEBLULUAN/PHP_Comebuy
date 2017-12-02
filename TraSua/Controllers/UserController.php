@@ -1,38 +1,28 @@
 <?php
 
-/**
-* 
-*/
-session_start();
-class UserController
-{
-	public function showSignin()
-	{
-		require 'Views/signin.php';
-	}
 
-	public function showProfile()
-	{
-		$username = (isset($_SESSION["username"]) ? $_SESSION["username"] : $_COOKIE["username"]);
-		require 'Views/profile.php';
-	}
-
-	public function account()
+	/**
+	* 
+	*/
+	require 'Models/UserModel.php';
+	class UserController
 	{
 		
-		if(!isset($_SESSION["username"]) && !isset($_COOKIE["username"]))
-			self::showSignin();
-		else {
-			self::showProfile();
+		public function index()
+		{
+			self::profile();
+		}
+
+		public function profile()
+		{
+			$query = "SELECT nguoi_dung.*, tai_khoan.ma_nguoi_dung FROM nguoi_dung, tai_khoan WHERE tai_khoan.ma_nguoi_dung = nguoi_dung.ma_nguoi_dung AND tai_khoan.id = ? ";
+			$user_model = new UserModel();
+			$options = array($_SESSION["id"]);
+			
+			$results = $user_model->getUserInfomation($options);
+			print_r($results);
+			echo "<br>";
+			echo $results->ten_nguoi_dung;
+			// require 'Views/profile.php';
 		}
 	}
-
-	public function checkIfUserIsAvailable()
-	{
-		$_SESSION["username"] = $_POST["username"];
-		require 'Views/home.php';
-	}
-	
-}
-
-	
