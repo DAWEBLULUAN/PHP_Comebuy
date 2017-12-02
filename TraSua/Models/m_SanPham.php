@@ -22,5 +22,12 @@ class M_SanPham extends Model
 		$param = array($mamon);
 		return $this->loadRow($param);
 	}
+	public function Doc_mon_an_theo_loai_mon($maloai)
+	{
+		$sql="select * from san_pham where ma_loai_sp = ?";
+		$this->setQuery($sql);
+		$param = array($maLoai);
+		return $this->loadAllRows();
+	}
 }
  ?>
