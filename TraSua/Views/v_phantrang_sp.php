@@ -6,15 +6,16 @@
 
 <div style="text-align: center;" >
 						<?php 
-							
-						for ($i=1; $i <= count($dem_san_pham); $i++) { 
+							$sotrang = count($dem_san_pham)%8+1;
+						for ($i=1; $i <= $sotrang; $i++) { 
 						?>
-							<button  type="button" class="btn btn-success" onclick='btnPhanTrangCLick(<?php echo json_encode($maloai)?>,<?=$i?>)'><?= $i?></button>
+							<button  type="button" id="<?=$i?>" class="btn btn-success" onclick='btnPhanTrangCLick(<?php echo json_encode($maloai)?>,<?=$i?>)'><?= $i?></button>
 						<?php 
 						} 
 						?>
  </div>
 <script >
+	 document.getElementById("1").click(); 
 	function btnPhanTrangCLick(loaisp,indextrang) {
 		 var loaisp = loaisp;
   	 	 var indexTrang =indextrang;

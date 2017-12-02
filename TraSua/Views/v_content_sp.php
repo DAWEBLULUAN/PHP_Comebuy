@@ -1,5 +1,4 @@
 
-ZXCZXCZXC
 <div class="container" >
 <?php 
 foreach ($san_pham as $sp) {

@@ -17,7 +17,6 @@ class C_sanpham_content
 		//Model
 		$m_sanpham = new M_SanPham();
 		$san_pham=$m_sanpham->Doc_mon_an_theo_loai_mon_phan_trang($options);
-		print_r($san_pham);
 
 		//View 
 		include("Views/v_content_sp.php");

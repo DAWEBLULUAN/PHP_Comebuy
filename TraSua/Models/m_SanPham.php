@@ -32,7 +32,7 @@ class M_SanPham extends Model
 	public function Doc_mon_an_theo_loai_mon_phan_trang($options)
 	{
 
-		$sql = "SELECT * FROM san_pham where ma_loai_sp = '$options[0]' LIMIT $options[1] , 2 ";
+		$sql = "SELECT * FROM san_pham where ma_loai_sp = '$options[0]' LIMIT $options[1] , 8 ";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
