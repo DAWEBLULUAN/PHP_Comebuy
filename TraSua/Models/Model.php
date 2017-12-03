@@ -17,6 +17,7 @@ class Model
 			// cái này sửa lại nè, nhớ sửa thường xuyên, vì tao lỡ cài mật khẩu cho mysql của tao rồi
 			//Bữa đặt lại mật khẩu trắng lỗi tung tóe -_-
 			//Lười google :))
+			
 			//sửa dbname, sửa cái '' sau root
 
 			//ten database cua tao(Lu) la : comebuy
@@ -78,29 +79,29 @@ class Model
 	//Lấy 1 dòng
 	public function loadRow($option=array()) 
 	{
-    if(!$option) {
-      if(!$result = $this->execute())
-          return false;
-    }
-    else {
-      if(!$result = $this->execute($option))
-          return false;
-    }
-    return $result->fetch(PDO::FETCH_OBJ);
-  }
+		if(!$option) {
+			if(!$result = $this->execute())
+				return false;
+		}
+		else {
+			if(!$result = $this->execute($option))
+				return false;
+		}
+		return $result->fetch(PDO::FETCH_OBJ);
+	}
 
-  public function checkIfAvailable($options=array()) {
+	public function checkIfAvailable($options=array()) {
   	// $query = "SELECT id, ten_tk FROM tai_khoan WHERE ten_tk = ? AND mat_khau = ?";
    //  $this->setQuery($query);
-    if(!$options) {
-      if(!$result = $this->execute())
-        return false;
-    }
-    else {
-      if(!$result = $this->execute($options))
-        return false;
-    }
-    return $result->fetch(PDO::FETCH_OBJ);
+		if(!$options) {
+			if(!$result = $this->execute())
+				return false;
+		}
+		else {
+			if(!$result = $this->execute($options))
+				return false;
+		}
+		return $result->fetch(PDO::FETCH_OBJ);
 
     // $query = "SELECT id, ten_tk FROM tai_khoan WHERE ten_tk = ? AND mat_khau = ?";
     // $this->setQuery($query);
@@ -112,11 +113,11 @@ class Model
     // // $option = array($_POST["username"], $_POST["password"]);
     // return $checkk;
     // return $this->loadRow($options);
-  }
+	}
 
-  
+
 
 }
 
 
- ?>
+?>

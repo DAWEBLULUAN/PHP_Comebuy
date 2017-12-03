@@ -25,7 +25,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- End CSS - LU -->
-	<link rel="icon" type="image/png" href="img/icons/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="Views/img/icons/favicon.png" sizes="32x32">
   <link rel="stylesheet" href="Views/lib/css/main.min.css">
   <link rel="stylesheet" href="Views/lib/css/W3/W3.css">
 	<link rel="stylesheet" href="Views/lib/css/FA/font-awesome.css">
