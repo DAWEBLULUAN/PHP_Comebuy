@@ -1,6 +1,10 @@
 <?php
 	$profile_css = "<link rel='stylesheet' href='Views/lib/css/profile.css'>";
 	require 'parts/header.php';
+	// if(isset($result))
+	// 	$user = $result;
+	// else $user = null;
+	// if($user->gioi_tinh) echo "true";else echo "false";
 ?>
 <div class="header">
 	<div class="container">
@@ -58,44 +62,44 @@
 		
 		<div class="personal-infomation">
 			<h3>Private infomation</h3>
-		  <form action="">
+		  <form action="user.php?route=update" method = 'post'>
 
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name='name' value="<?= $user->ten_nguoi_dung?>" required>
 		      <span class="my-bar"></span>
 		      <label>Name</label>
 		    </div>
 
 		    <div class="my-form-control">
-		    	<input type="radio" name="gender" id="radMale"> <span for="radMale">Male</span>
+		    	<input type="radio" name="gender" <?php if($user->gioi_tinh) echo "checked" ?> id="radMale" value='1'> <span>Male</span>
 		    	&nbsp;&nbsp;&nbsp;
-		    	<input type="radio" name="gender" id="radFemale"> <span for="radMale">Female</span>
+		    	<input type="radio" name="gender" <?php if(!$user->gioi_tinh) echo "checked" ?> id="radFemale" value='0'> <span>Female</span>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input id="dtpBirthday" type="text" required onfocus="(this.type='date')" onblur="onblurFunction()">
+		      <input id="dtpBirthday" type="text" name='birthday' value="<?=date_format(date_create($user->ngay_sinh), 'd-m-Y')?>" required onfocus="(this.type='date')" onblur="onblurFunction()">
 		      <span class="my-bar"></span>
 		      <label>Birthday</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name='phone' value='<?=$user->so_dien_thoai?>' required>
 		      <span class="my-bar"></span>
 		      <label>Phone number</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name='email' required value='<?=$user->email?>'>
 		      <span class="my-bar"></span>
 		      <label>Email</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name='address' required value='<?=$user->dia_chi?>'>
 		      <span class="my-bar"></span>
 		      <label>Address</label>
 		    </div>
-
+				<input type="hidden" name='user_id' value='<?=$user->ma_nguoi_dung?>'>
 		    <div><input type="submit" class="w3-btn w3-block w3-red w3-hover-black" value="Update"></div>
 		    
 		  </form>
@@ -122,4 +126,6 @@
 		if(dtp.value == "")
 			dtp.type = 'text';
 	}
+
+	// <?php if($update_result) ?>
 </script>
