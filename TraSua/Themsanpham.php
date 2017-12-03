@@ -1,5 +1,7 @@
 <?php 
-include("Controllers/c_add-products.php");
+require("Controllers/c_add-products.php");
 $caddsp = new C_addsp();
-$caddsp->loadCBB();
+$route = (isset($_GET["route"])? $_GET["route"] : 'themspidx');
+$caddsp->$route();
+
  ?>

@@ -5,7 +5,7 @@
  ?>
 
 <h2>Add new product</h2>
-<form action="" method="get">
+<form action="Themsanpham.php?route=ThemSP" method="post">
 	<div class="form-group">
     <label for="product-image">Image:</label>
     <input type="file" name="product-image" class="form-control" id="product-image">
@@ -20,7 +20,7 @@
       <?php 
         foreach ($dsloaisp as $item) {
        ?>
-    	<option value=""><?=$item->ten_loai_sp?></option>
+    	<option value=<?=$item->ma_loai_sp?>><?=$item->ten_loai_sp?></option>
       <?php
        }
        ?>

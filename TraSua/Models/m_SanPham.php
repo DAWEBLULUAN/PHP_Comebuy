@@ -41,5 +41,11 @@ class M_SanPham extends Model
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
+	public function Them_moi_san_pham($optionSP)
+	{
+		$sql="INSERT INTO san_pham ('ma_sp', 'ten_sp', 'ma_loai_sp', 'hinh_anh', 'gia_ban', 'gioi_thieu', 'trang_thai') VALUES ('$optionSP[0]', '$optionSP[1]', '$optionSP[2]', '$optionSP[3]', '$optionSP[4]', '$optionSP[5]',  '1');";
+		$this->setQuery($sql);
+		return ( $this->execute()->rowCount() > 0);
+	}
 }
  ?>
