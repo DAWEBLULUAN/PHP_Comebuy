@@ -3,14 +3,19 @@
 * 
 */
 include("Models/m_SanPham.php");
-
+$tranghientai=0;
 class C_sanpham_content
 {
-
+		
 	public function Hien_thi_san_pham()
 	{
 		$maloai=$_GET["maloai"];
-		$indexTrang = $_GET["indexT"];
+		if(isset($_GET["indexT"]))
+		{
+			$indexTrang =$_GET["indexT"];
+			$tranghientai=$indexTrang;
+		}
+		
 		settype($indexTrang, "int");
 		//Model
 		$m_sanpham = new M_SanPham();

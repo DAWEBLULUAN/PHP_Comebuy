@@ -112,8 +112,8 @@ div.tab button.active {
 // đoạn trên là hiệu ứng các thử ở menutop tab
 // đoạn dưới là ajax xài jquery
   	 	 var loaisp = maloaiF;
-  	 	 var indexTrang =3;
-  	  $.get("phantrang_sp.php",{maloai:loaisp,indexT:indexTrang},function(data){
+  	 	 var indexTrangg =1;
+  	  $.get("phantrang_sp.php",{maloai:loaisp,indexT:indexTrangg},function(data){
   	  	$("#phan_trang").html(data);
  	   })
 	}

@@ -27,10 +27,10 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col-xs-6">
-							<h4>COMEBUY</h4>
+							<h4>COMEBUY-LU</h4>
 						</div>
 						<div class="col-xs-6">
-							<h4 class="text-right">Vũ Minh Luân</h4>
+							<h4 class="text-right">Luân- Ckó ấy haha</h4>
 						</div>
 					</div>
 				</div>
