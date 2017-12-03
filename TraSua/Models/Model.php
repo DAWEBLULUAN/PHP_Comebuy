@@ -22,9 +22,10 @@ class Model
 
 			//ten database cua tao(Lu) la : comebuy
 			//database 2 đứa như nhau mà :v
+			//chớ sao hôm truocs database m tên khác -_-
 
 
-			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', 'mysql');
+			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', '');
 			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			// $this->conn->query('set names "utf8"');	
 		} catch (Exception $e) {
