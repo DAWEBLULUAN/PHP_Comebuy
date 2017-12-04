@@ -28,10 +28,14 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col-xs-6">
+<<<<<<< HEAD
+							<h4>COMEBUY-LU</h4>
+=======
 							<h4><a href="../index.php">COMEBUY</a></h4>
+>>>>>>> 49d2325db083410824dca5a010b53b26c6c426b7
 						</div>
 						<div class="col-xs-6">
-							<h4 class="text-right">Vũ Minh Luân</h4>
+							<h4 class="text-right">Luân- Ckó ấy haha</h4>
 						</div>
 					</div>
 				</div>
