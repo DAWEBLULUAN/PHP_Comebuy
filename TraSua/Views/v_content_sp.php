@@ -2,10 +2,10 @@
 <div class="container" >
 <?php 
 foreach ($san_pham as $sp) {
-	# code...
+	$linkAnh= $sp->hinh_anh;
  ?>
-						<div style="float: left;width: 23%;margin:1%;margin-top: 5%;">
-									<center><img src="Views/img/freddie-marriage-168317.png" alt="coffe cup"></center>
+						<div style="float: left;width: 23%;height: 100%; margin:1%;margin-top: 5%;">
+									<center><img style="width: 100%; height: 250px;" src="<?=$linkAnh?>" alt="coffe cup"></center>
 										<div><center><?php echo $sp->ten_sp."-".$sp->ma_sp ?></center></div>
 									<div class="line"><center>. . . . . . . . . . . . . . . . . . .</center></div>
 									<!-- Prices -->

@@ -15,9 +15,10 @@ class C_sanpham_content
 			$indexTrang =$_GET["indexT"];
 			$tranghientai=$indexTrang;
 		}
-		
-		settype($indexTrang, "int");
-		//Model
+		else 
+		{
+			$indexTrang= 1;
+		}
 		$m_sanpham = new M_SanPham();
 		$dem_san_pham=$m_sanpham->Doc_mon_an_theo_loai_mon($maloai);
 		//View 

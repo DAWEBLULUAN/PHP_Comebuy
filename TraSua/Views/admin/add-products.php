@@ -5,7 +5,7 @@
  ?>
 
 <h2>Add new product</h2>
-<form action="Themsanpham.php?route=ThemSP" method="post">
+<form action="Themsanpham.php?route=ThemSP" method="post" enctype="multipart/form-data">
 	<div class="form-group">
     <label for="product-image">Image:</label>
     <input type="file" name="product-image" class="form-control" id="product-image">

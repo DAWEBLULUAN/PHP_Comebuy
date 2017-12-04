@@ -11,7 +11,11 @@ class C_sanpham_content
 	{
 		$maloai=$_GET["maloai"];
 		$indexTrang =  $_GET["indexT"];
-		$options = array('LSP001',$indexTrang);
+		if($indexTrang!=1)
+		{
+			$indexTrang*=8;
+		}
+		$options = array($maloai,$indexTrang);
 
 		//, $indexTrang
 		//Model
