@@ -19,4 +19,18 @@ class UserModel extends Model
 		$this->setQuery($query);
 		return ( $this->execute($options)->rowCount() > 0);
 	}
+
+	public function autoGenerateUserId()
+	{
+		$query = "SELECT COUNT(*) AS 'Count' FROM nguoi_dung";
+		$this->setQuery($query);
+		return $this->loadRow();
+	}
+
+	public function create($options)
+	{
+		$query = "INSERT INTO nguoi_dung(ma_nguoi_dung ,ten_nguoi_dung, so_dien_thoai, dia_chi) VALUES(?, ?, ?, ?)";
+		$this->setQuery($query);
+		return ($this->execute($options)->rowCount() > 0);
+	}
 }
