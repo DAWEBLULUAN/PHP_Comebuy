@@ -7,10 +7,10 @@ class C_addsp
 {
 	// ma_sp	ten_sp	ma_loai_sp	hinh_anh	gia_ban	don_vi_ban	gioi_thieu
 	public function themspidx()
-		{
-		 //	self::profile();
-			echo "ấzxczxc";
-		}
+	{
+		 	self::loadCBB();
+		
+	}
 
 	public function loadCBB()
 	{
@@ -21,7 +21,7 @@ class C_addsp
 	public function TaoMaSP()
 	{
 		$m_sanpham = new M_SanPham();
-		$dem_san_pham=$m_sanpham->Doc_mon_an_theo_loai_mon($maloai);
+		$dem_san_pham=$m_sanpham->Doc_mon_an();
 		$soluongsp=count($dem_san_pham)+1;
 		$sp_id="SP";
 		for ($i=0; $i < 6-strlen("SP".$soluongsp); $i++) { 
@@ -32,7 +32,7 @@ class C_addsp
 	public function ThemSP()
 	{
 		$optionSP= array();
-		$optionSP[]= "12333" //TaoMaSP();//mã sp
+		$optionSP[]= $this->TaoMaSP();//mã sp
 		//echo  TaoMaSP();
 		if (isset($_POST["product-name"])) 
 			$optionSP[]= $_POST["product-name"];// tên sp
@@ -48,6 +48,7 @@ class C_addsp
 
 		$msp = new M_SanPham();
 		$kq = $msp->Them_moi_san_pham($optionSP);
+		if($kq) echo "Thành công";
 		//require("Views/admin/add-products.php");
 	}
 }
