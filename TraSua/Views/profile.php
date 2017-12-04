@@ -30,28 +30,27 @@
 				else echo $_SESSION["username"]." Session";
 			?>
 			<h3>Change password</h3>
-		  <form action="">
+		  <form action="account.php?route=changePassword" method="post">
 
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name="cur_password" required>
 		      <span class="my-bar"></span>
 		      <label>Recent password</label>
 		    </div>
 		      
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name="new_password" required>
 		      <span class="my-bar"></span>
 		      <label>New password</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" required>
+		      <input type="text" name="repeat_password" required>
 		      <span class="my-bar"></span>
 		      <label>Re-enter new password</label>
 		    </div>
 
 		    <div><input type="submit" class="w3-btn w3-block w3-red w3-hover-black" value="Change password"></div>
-				<div><a href="signout.php">Sign out</a></div>
 		  </form>
 	  </div>
 	</div>
@@ -71,13 +70,13 @@
 		    </div>
 
 		    <div class="my-form-control">
-		    	<input type="radio" name="gender" <?php if($user->gioi_tinh) echo "checked" ?> id="radMale" value='1'> <span>Male</span>
+		    	<input type="radio" name="gender" <?php if($user->gioi_tinh) echo "checked" ?> id="rdbMale" value='1'> <span>Male</span>
 		    	&nbsp;&nbsp;&nbsp;
-		    	<input type="radio" name="gender" <?php if(!$user->gioi_tinh) echo "checked" ?> id="radFemale" value='0'> <span>Female</span>
+		    	<input type="radio" name="gender" <?php if(!$user->gioi_tinh) echo "checked" ?> id="rdbFemale" value='0'> <span>Female</span>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input id="dtpBirthday" type="text" name='birthday' value="<?=date_format(date_create($user->ngay_sinh), 'd-m-Y')?>" required onfocus="(this.type='date')" onblur="onblurFunction()">
+		      <input id="dtpBirthday" type="text" name='birthday' value="<?php if($user->ngay_sinh) echo date_format(date_create($user->ngay_sinh), 'd-m-Y')?>" onfocus="(this.type='date')" onblur="onblurFunction()">
 		      <span class="my-bar"></span>
 		      <label>Birthday</label>
 		    </div>
@@ -89,7 +88,7 @@
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" name='email' required value='<?=$user->email?>'>
+		      <input type="text" name='email' value='<?=$user->email?>'>
 		      <span class="my-bar"></span>
 		      <label>Email</label>
 		    </div>
@@ -126,6 +125,14 @@
 		if(dtp.value == "")
 			dtp.type = 'text';
 	}
+	var x = <?php echo json_encode($user->gioi_tinh); ?>;
+	if(x == 1)
+		document.getElementById("rdbMale").checked = true;
+	else if(x == 0)
+		document.getElementById("rdbFemale").checked = true;
+	else {
+		document.getElementById("rdbMale").checked = false;
+		document.getElementById("rdbFemale").checked = false;
+	}
 
-	// <?php if($update_result) ?>
 </script>

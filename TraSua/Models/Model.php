@@ -25,7 +25,7 @@ class Model
 			//chớ sao hôm truocs database m tên khác -_-
 
 
-			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', '');
+			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', 'mysql');
 			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			// $this->conn->query('set names "utf8"');	
 		} catch (Exception $e) {
@@ -92,8 +92,6 @@ class Model
 	}
 
 	public function checkIfAvailable($options=array()) {
-  	// $query = "SELECT id, ten_tk FROM tai_khoan WHERE ten_tk = ? AND mat_khau = ?";
-   //  $this->setQuery($query);
 		if(!$options) {
 			if(!$result = $this->execute())
 				return false;
@@ -103,17 +101,6 @@ class Model
 				return false;
 		}
 		return $result->fetch(PDO::FETCH_OBJ);
-
-    // $query = "SELECT id, ten_tk FROM tai_khoan WHERE ten_tk = ? AND mat_khau = ?";
-    // $this->setQuery($query);
-    // $a = $this->conn->prepare($query);
-    // $a->bindParam(1, $options[0]);
-    // $a->bindParam(2, $options[1]);
-    // $a->execute();
-    // $checkk = $a->fetch(PDO::FETCH_OBJ);
-    // // $option = array($_POST["username"], $_POST["password"]);
-    // return $checkk;
-    // return $this->loadRow($options);
 	}
 
 
