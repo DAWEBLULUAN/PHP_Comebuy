@@ -53,7 +53,7 @@
 				      		<span class="nav-header-primary">
 				      			Shop 
 				      			<span class="pull-right">
-				      				<b class="fa fa-chevron-down"></b>
+				      				<b id="click" class="fa fa-chevron-down"></b>
 				      			</span>
 				      		</span>
 				    	</a>
@@ -89,11 +89,14 @@
 				      		<span class="nav-header-primary">Account <span class="pull-right"><b class="fa fa-chevron-down"></b></span></span>
 				    	</a>
 				    	<ul class="nav nav-list collapse" id="submenuAccount">
-						    <li>
-						      	<a href="?page=account-management" class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount1">&nbsp;Show all</a>
+						    <li class="menu-item" id="show_all_acc">
+						      	<a  class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount1">&nbsp;Show all</a>
 						    </li>
 						    <li>
-						      	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount2">&nbsp;Add new</a>
+						      	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount2">&nbsp;Active</a>
+						    </li>
+						    <li>
+						      	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount2">&nbsp;Inactive</a>
 						    </li>
 					    </ul>
 				  	</li>
@@ -105,8 +108,8 @@
 				      		<span class="nav-header-primary">Orders<span class="pull-right"><b class="fa fa-chevron-down"></b></span></span>
 				    	</a>
 				    	<ul class="nav nav-list collapse" id="submenuOrder">
-						    <li>
-						      	<a href="?page=orders" class="accordion-heading" data-toggle="collapse" data-target="#submenuOrder1">&nbsp;Show all</a>
+						    <li class="menu-item" id='show_all_orders'>
+						      	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuOrder1">&nbsp;Show all</a>
 						    </li>
 					    </ul>
 				  	</li>
@@ -122,12 +125,11 @@
 
 			<!-- Right Content -->
 			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-				<div style="width: 100%; height: auto; background-color: #fff">
+				<div style="width: 100%; height: auto; background-color: #fff" id="right-content">
 					
 
 					<?php
 						require $page.'.php';
-
 					?>
 
 
@@ -149,46 +151,56 @@
 <script>
 	$(document).ready(function(){
 
-  	var li = $('li.my-page-item');
+  // 	var li = $('li.my-page-item');
 
-  	$(li).click(function() {
-  		$(this).siblings().removeClass('active');
-  		$(this).addClass('active');
-  	});
+  // 	$(li).click(function() {
+  // 		$(this).siblings().removeClass('active');
+  // 		$(this).addClass('active');
+  // 	});
 
-		$('.my-previous-page').click(function() {
-	    li.each(function(i) {
-        if ( $(this).hasClass('active') ) {
-          if(i-1 >= 0){
-            li.removeClass('active');
-            li.eq(i-1).addClass('active');
-          }
-        }
-	    });
-		});
+		// $('.my-previous-page').click(function() {
+	 //    li.each(function(i) {
+  //       if ( $(this).hasClass('active') ) {
+  //         if(i-1 >= 0){
+  //           li.removeClass('active');
+  //           li.eq(i-1).addClass('active');
+  //         }
+  //       }
+	 //    });
+		// });
 
-		$('.my-next-page').click(function() {
-	    li.each(function(i) {
-        if ( $(this).hasClass('active') ) {
-          if(i+1 < li.length){
-            li.removeClass('active');
-            li.eq(i+1).addClass('active');
-            return false;
-          }
-        }
-	    });
-		});
+		// $('.my-next-page').click(function() {
+	 //    li.each(function(i) {
+  //       if ( $(this).hasClass('active') ) {
+  //         if(i+1 < li.length){
+  //           li.removeClass('active');
+  //           li.eq(i+1).addClass('active');
+  //           return false;
+  //         }
+  //       }
+	 //    });
+		// });
 
 
-		$("li.my-menu-item").click(function(){
-        $(this).find("a span span b").toggleClass('w3-red');
-    });
 		
+		// $("li.my-menu-item").click(function(){
+  //     if( $(this).find("a span span b").hasClass('fa-chevron-down') ) {
+  //     	$(this).find("a span span b").removeClass('fa-chevron-down').addClass('fa-chevron-up');
+  //     }
+  //     else if( $(this).find("a span span b").hasClass('fa-chevron-up') ) {
+  //     	$(this).find("a span span b").removeClass('fa-chevron-up').addClass('fa-chevron-down');
+  //     }
+  //   });
 
-
-
+    $("li.menu-item").click(function() {
+    	var x = $(this).attr('id');
+    	$.get('admin_menu_navigation.php?route='+x, function(data) {
+	    	$("#right-content").html(data);
+	    });
+    });
+    
+		
 	});
-
 </script>
 
 </body>

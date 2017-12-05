@@ -51,7 +51,7 @@
 	      </tr>
 	    </thead>
 	    <tr>
-	    	<td class="remove-products"><a href=""><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
+	    	<td class="remove-products"><a " id="btnClose"><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
 	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
 	      <td>
 	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
@@ -63,7 +63,7 @@
 	    </tr>
 
 	    <tr>
-	    	<td class="remove-products"><a href=""><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
+	    	<td class="remove-products"><a ><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
 	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
 	      <td>
 	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
@@ -75,7 +75,7 @@
 	    </tr>
 
 	    <tr>
-	    	<td class="remove-products"><a href=""><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
+	    	<td class="remove-products"><a ><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
 	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
 	      <td>
 	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
@@ -99,3 +99,9 @@
 <?php
 	require 'parts/footer.php';
 ?>
+
+<script>
+	$(".remove-products a i.fa-close").click(function() {
+		$(this).parent().parent().parent().hide();
+	});
+</script>
