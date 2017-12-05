@@ -3,49 +3,48 @@
 * 
 */
 include("Models/m_SanPham.php");
-class C_addsp
+class C_qlsp
 {
 	// ma_sp	ten_sp	ma_loai_sp	hinh_anh	gia_ban	don_vi_ban	gioi_thieu
-	public function themspidx()
+
+	public  function edit()
 	{
-		 	self::loadCBB();
-		
+			if(isset($_GET["masp"]))
+			{
+
+				$masp=$_GET["masp"];
+				$Csp= new M_SanPham();
+				$dsloaisp= $Csp->Doc_loai_san_pham();
+				$sp = $Csp-> Doc_mon_an_theo_ma_mon($masp);
+
+				require ("Views/admin/edit-products.php");
+
+			}	
+			
+	}
+	public function confirmEdit()
+	{
+	    ///
+	    echo "Chỉnh sửa thành công";
+	    self::load_tat_ca_sp();
+	}
+	public function delete()
+	{
+		echo "Xóa thành công";
+	//	header("Location: quanly_sp.php");
 	}
 
-	public function loadCBB()
+
+
+
+	public function load_tat_ca_sp()
 	{
 		$msp = new M_SanPham();
-		$dsloaisp= $msp->Doc_loai_san_pham();
-		require("Views/admin/add-products.php");
-		//
-
-
-	//	$maloai=$_GET["maloai"];
-	//	$indexTrang =  $_GET["indexT"];
-	//	if($indexTrang!=1)
-	//	{
-	//		$indexTrang*=8;
-	//	}
-	//	$options = array($maloai,$indexTrang);
-
-		//, $indexTrang
-		//Model
-
-	}
-	public function TaoMaSP()
-	{
-		$m_sanpham = new M_SanPham();
-		$dem_san_pham=$m_sanpham->Doc_mon_an();
-		$soluongsp=count($dem_san_pham)+1;
-		$sp_id="SP";
-		for ($i=0; $i < 6-strlen("SP".$soluongsp); $i++) { 
-			$sp_id."0";
-		}
-		return $sp_id.$soluongsp;
+		$san_pham= $msp->Doc_mon_an();
+		require("Views/admin/v_quanly_sp.php");
 	}
 	public function ThemSP()
 	{
-		
 		$optionSP= array();
 		$optionSP[]= $this->TaoMaSP();//mã sp
 		//echo  TaoMaSP();
@@ -75,7 +74,7 @@ class C_addsp
 		if($kq)
 		{
 			echo "Thêm thành công";
-			header("Location: quanly_sp.php");
+			self::loadCBB();
 		} 
 		//require("Views/admin/add-products.php");
 	}
