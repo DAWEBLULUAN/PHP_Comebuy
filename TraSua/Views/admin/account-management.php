@@ -1,330 +1,200 @@
 Account
 
 <div class="row">
+
 	<div class="col-xs-12 col-lg-6 one-order">
 		<div class="w3-card-4">
 			<form action="" method="post">
 		    <header class="w3-container w3-light-grey w3-display-container">
-		      <div class="my-form-control">
-			      <input type="text" required>
-			      <span class="my-bar"></span>
-			      <label class="user-type">Moderator</label>
-			    </div>
+		      <h4>Customer</h4>
 		      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
 		    </header>
 		    <div class="w3-container">
 		    	<br>
-		      <div class="my-form-control">      
-			      <input type="text" required>
-			      <span class="my-bar"></span>
-			      <label>Account</label>
-			    </div>
-		      <div class="my-form-control">      
-			      <input type="text" required>
-			      <span class="my-bar"></span>
-			      <label>Password</label>
-			    </div>
-		      <br>
-
-		      <div class="my-form-control">
-			    	<input type="radio" name="gender" id="radMale"> <span for="radMale">Male</span>
-			    	&nbsp;&nbsp;&nbsp;
-			    	<input type="radio" name="gender" id="radFemale"> <span for="radMale">Female</span>
-			    </div>
-
-			    <div class="my-form-control">      
-			      <input class="dtpBirthday" type="text" required onfocus="(this.type='date')" onblur="onblurFunction(this)">
-			      <span class="my-bar"></span>
-			      <label>Birthday</label>
-			    </div>
-
-			    <div class="my-form-control">      
-			      <input type="text" required>
-			      <span class="my-bar"></span>
-			      <label>Phone number</label>
-			    </div>
-
-			    <div class="my-form-control">      
-			      <input type="text" required>
-			      <span class="my-bar"></span>
-			      <label>Email</label>
-			    </div>
-
-			    <div class="my-form-control">      
-			      <input type="text" required>
-			      <span class="my-bar"></span>
-			      <label>Address</label>
-			    </div>
-		      <br>
-
+		    	<table>
+		    		<tr>
+		    			<td>Account:&nbsp;</td>
+		    			<td>&nbsp;luan123</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Full name:&nbsp;</td>
+		    			<td>&nbsp;Vũ Minh Luân</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Phone number:&nbsp;</td>
+		    			<td>&nbsp;01227978173</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Address:&nbsp;</td>
+		    			<td>&nbsp;65, Huỳnh Thúc Kháng, Quận 1 TP. HCM</td>
+		    		</tr>
+		    	</table>
 		    </div>
+		    <br>
 		    <div class="w3-container">
 			    <button class="w3-button w3-dark-grey">Upgrade</button>
 			    <button class="w3-button w3-dark-grey">Downgrade</button>
 		    </div>
 		    <br>
-		    <button class="w3-button w3-block w3-dark-grey">Update</button>
+		    <a style="text-decoration: none;" class="w3-button w3-block w3-dark-grey" onclick="document.getElementById('id01').style.display='block'">View</a>
 	    </form>
 	  </div>
 	</div>
 
 	<div class="col-xs-12 col-lg-6 one-order">
 		<div class="w3-card-4">
-	    <header class="w3-container w3-light-grey w3-display-container">
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label class="user-type">Customer</label>
+			<form action="" method="post">
+		    <header class="w3-container w3-light-grey w3-display-container">
+		      <h4 style="text-decoration: line-through;">Customer</h4>
+		      <a href="javascript: void(0)" style="display: none"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
+		    </header>
+		    <div class="w3-container">
+		    	<br>
+		    	<table>
+		    		<tr>
+		    			<td>Account:&nbsp;</td>
+		    			<td>&nbsp;luan123</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Full name:&nbsp;</td>
+		    			<td>&nbsp;Vũ Minh Luân</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Phone number:&nbsp;</td>
+		    			<td>&nbsp;01227978173</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Address:&nbsp;</td>
+		    			<td>&nbsp;65, Huỳnh Thúc Kháng, Quận 1 TP. HCM</td>
+		    		</tr>
+		    	</table>
 		    </div>
-	      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
-	    </header>
-	    <div class="w3-container">
-	    	<br>
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Account</label>
+		    <br>
+		    <div class="w3-container">
+		    	<button style="display: none" class="w3-button w3-dark-grey">Upgrade</button>
+			    <button style="display: none" class="w3-button w3-dark-grey">Downgrade</button>
+			    <button class="w3-button w3-dark-grey">Unblock</button>
 		    </div>
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Password</label>
-		    </div>
-	      <br>
-
-	      <div class="my-form-control">
-		    	<input type="radio" name="gender" id="radMale"> <span for="radMale">Male</span>
-		    	&nbsp;&nbsp;&nbsp;
-		    	<input type="radio" name="gender" id="radFemale"> <span for="radMale">Female</span>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input class="dtpBirthday" type="text" required onfocus="(this.type='date')" onblur="onblurFunction(this)">
-		      <span class="my-bar"></span>
-		      <label>Birthday</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Phone number</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Email</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Address</label>
-		    </div>
-				
-	      <br>
-	    </div>
-	    <div class="w3-container">
-			    <button class="w3-button w3-dark-grey">Upgrade</button>
-			    <button class="w3-button w3-dark-grey">Downgrade</button>
-		    </div>
-	    <br>
-	    <button class="w3-button w3-block w3-dark-grey">Update</button>
+		    <br>
+		    <button class="w3-button w3-block w3-dark-grey">View</button>
+	    </form>
 	  </div>
 	</div>
 
 	<div class="col-xs-12 col-lg-6 one-order">
 		<div class="w3-card-4">
-	    <header class="w3-container w3-light-grey w3-display-container">
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label class="user-type">Moderator</label>
+			<form action="" method="post">
+		    <header class="w3-container w3-light-grey w3-display-container">
+		      <h4>Customer</h4>
+		      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
+		    </header>
+		    <div class="w3-container">
+		    	<br>
+		    	<table>
+		    		<tr>
+		    			<td>Account:&nbsp;</td>
+		    			<td>&nbsp;luan123</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Full name:&nbsp;</td>
+		    			<td>&nbsp;Vũ Minh Luân</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Phone number:&nbsp;</td>
+		    			<td>&nbsp;01227978173</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Address:&nbsp;</td>
+		    			<td>&nbsp;65, Huỳnh Thúc Kháng, Quận 1 TP. HCM</td>
+		    		</tr>
+		    	</table>
 		    </div>
-	      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
-	    </header>
-	    <div class="w3-container">
-	    	<br>
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Account</label>
-		    </div>
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Password</label>
-		    </div>
-	      <br>
-
-	      <div class="my-form-control">
-		    	<input type="radio" name="gender" id="radMale"> <span for="radMale">Male</span>
-		    	&nbsp;&nbsp;&nbsp;
-		    	<input type="radio" name="gender" id="radFemale"> <span for="radMale">Female</span>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input class="dtpBirthday" type="text" required onfocus="(this.type='date')" onblur="onblurFunction(this)">
-		      <span class="my-bar"></span>
-		      <label>Birthday</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Phone number</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Email</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Address</label>
-		    </div>
-				
-	      <br>
-	    </div>
-	    <div class="w3-container">
+		    <br>
+		    <div class="w3-container">
 			    <button class="w3-button w3-dark-grey">Upgrade</button>
 			    <button class="w3-button w3-dark-grey">Downgrade</button>
 		    </div>
-	    <br>
-	    <button class="w3-button w3-block w3-dark-grey">Update</button>
+		    <br>
+		    <button class="w3-button w3-block w3-dark-grey">View</button>
+	    </form>
 	  </div>
 	</div>
 
 	<div class="col-xs-12 col-lg-6 one-order">
 		<div class="w3-card-4">
-	    <header class="w3-container w3-light-grey w3-display-container">
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label class="user-type">Customer</label>
+			<form action="" method="post">
+		    <header class="w3-container w3-light-grey w3-display-container">
+		      <h4>Customer</h4>
+		      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
+		    </header>
+		    <div class="w3-container">
+		    	<br>
+		    	<table>
+		    		<tr>
+		    			<td>Account:&nbsp;</td>
+		    			<td>&nbsp;luan123</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Full name:&nbsp;</td>
+		    			<td>&nbsp;Vũ Minh Luân</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Phone number:&nbsp;</td>
+		    			<td>&nbsp;01227978173</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Address:&nbsp;</td>
+		    			<td>&nbsp;65, Huỳnh Thúc Kháng, Quận 1 TP. HCM</td>
+		    		</tr>
+		    	</table>
 		    </div>
-	      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
-	    </header>
-	    <div class="w3-container">
-	    	<br>
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Account</label>
-		    </div>
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Password</label>
-		    </div>
-	      <br>
-
-	      <div class="my-form-control">
-		    	<input type="radio" name="gender" id="radMale"> <span for="radMale">Male</span>
-		    	&nbsp;&nbsp;&nbsp;
-		    	<input type="radio" name="gender" id="radFemale"> <span for="radMale">Female</span>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input class="dtpBirthday" type="text" required onfocus="(this.type='date')" onblur="onblurFunction(this)">
-		      <span class="my-bar"></span>
-		      <label>Birthday</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Phone number</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Email</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Address</label>
-		    </div>
-				
-	      <br>
-	    </div>
-	    <div class="w3-container">
+		    <br>
+		    <div class="w3-container">
 			    <button class="w3-button w3-dark-grey">Upgrade</button>
 			    <button class="w3-button w3-dark-grey">Downgrade</button>
 		    </div>
-	    <br>
-	    <button class="w3-button w3-block w3-dark-grey">Update</button>
+		    <br>
+		    <button class="w3-button w3-block w3-dark-grey">View</button>
+	    </form>
 	  </div>
 	</div>
 
 	<div class="col-xs-12 col-lg-6 one-order">
 		<div class="w3-card-4">
-	    <header class="w3-container w3-light-grey w3-display-container">
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label class="user-type">Customer</label>
+			<form action="" method="post">
+		    <header class="w3-container w3-light-grey w3-display-container">
+		      <h4>Customer</h4>
+		      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
+		    </header>
+		    <div class="w3-container">
+		    	<br>
+		    	<table>
+		    		<tr>
+		    			<td>Account:&nbsp;</td>
+		    			<td>&nbsp;luan123</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Full name:&nbsp;</td>
+		    			<td>&nbsp;Vũ Minh Luân</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Phone number:&nbsp;</td>
+		    			<td>&nbsp;01227978173</td>
+		    		</tr>
+		    		<tr>
+		    			<td>Address:&nbsp;</td>
+		    			<td>&nbsp;65, Huỳnh Thúc Kháng, Quận 1 TP. HCM</td>
+		    		</tr>
+		    	</table>
 		    </div>
-	      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
-	    </header>
-	    <div class="w3-container">
-	    	<br>
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Account</label>
+		    <br>
+		    <div class="w3-container">
+			    <button class="w3-button w3-dark-grey">Upgrade</button>
+			    <button class="w3-button w3-dark-grey">Downgrade</button>
 		    </div>
-	      <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Password</label>
-		    </div>
-	      <br>
-
-	      <div class="my-form-control">
-		    	<input type="radio" name="gender" id="radMale"> <span for="radMale">Male</span>
-		    	&nbsp;&nbsp;&nbsp;
-		    	<input type="radio" name="gender" id="radFemale"> <span for="radMale">Female</span>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input class="dtpBirthday" type="text" required onfocus="(this.type='date')" onblur="onblurFunction(this)">
-		      <span class="my-bar"></span>
-		      <label>Birthday</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Phone number</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Email</label>
-		    </div>
-
-		    <div class="my-form-control">      
-		      <input type="text" required>
-		      <span class="my-bar"></span>
-		      <label>Address</label>
-		    </div>
-				
-	      <br>
-	    </div>
-	    <div class="w3-container">
-		    <button class="w3-button w3-dark-grey">Upgrade</button>
-		    <button class="w3-button w3-dark-grey">Downgrade</button>
-	    </div>
-	    <br>
-	    <button class="w3-button w3-block w3-dark-grey">Update</button>
+		    <br>
+		    <button class="w3-button w3-block w3-dark-grey">View</button>
+	    </form>
 	  </div>
 	</div>
 
@@ -343,6 +213,129 @@ Account
 	  </ul>
 	</div>
 </div>
+
+
+<!-- Modal Popup -->
+<div class="container">
+	<div id="id01" class="w3-modal">
+		<div class="col-md-3"></div>
+		<div class="w3-card-4 w3-animate-zoom my-modal-content col-sm-12 col-md-6">
+			<header class="w3-container w3-blue"> 
+				<span onclick="document.getElementById('id01').style.display='none'" 
+				class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+				<h2>Header</h2>
+			</header>
+
+			<div class="w3-bar w3-border-bottom">
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'account')">Account</button>
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'private-information')">Infomation</button>
+			</div>
+
+			<div id="account" class="w3-container city">
+				<h1>Customer</h1>
+				<form class="form-horizontal" action="/action_page.php">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="account">Account:</label>
+						<div class="col-sm-9">
+							<input type="email" class="form-control" id="account" placeholder="Enter account" name="account">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="password">Password:</label>
+						<div class="col-sm-9">          
+							<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="created-day">Craeted date:</label>
+						<div class="col-sm-9">          
+							<input type="date" class="form-control" id="created-day" placeholder="Enter password" name="created_day">
+						</div>
+					</div>
+					<div class="form-group"> 
+						<div class="col-sm-offset-3 col-sm-9">
+							<div class="checkbox">
+								<label><input type="checkbox" checked> Active</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">        
+						<div class="col-sm-offset-3 col-sm-9">
+							<button type="submit" class="btn btn-default">Update</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div id="private-information" class="w3-container city">
+				<h1>Private Infomation</h1>
+				<form class="form-horizontal" action="/action_page.php">
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="name">Full name:</label>
+						<div class="col-sm-9">
+							<input type="email" class="form-control" id="name" placeholder="Enter account" name="name">
+						</div>
+					</div>
+
+					<div class="form-group"> 
+						<div class="col-sm-offset-3 col-sm-9">
+							<div class="radio">
+								<label><input type="radio" name="gender"> Male</label>
+								<label><input type="radio" name="gender"> Female</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="birthday">Birthday:</label>
+						<div class="col-sm-9">
+							<input type="date" class="form-control" id="birthday" placeholder="Enter account" name="birthday">
+						</div>
+					</div>
+
+					<div class="form-group">
+				    <label class="control-label col-sm-3" for="email">Email:</label>
+				    <div class="col-sm-9">
+				      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+				    </div>
+				  </div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for=phone">Phone number:</label>
+						<div class="col-sm-9">          
+							<input type="date" class="form-control" id="phone" placeholder="Enter password" name="phone">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="address">Address:</label>
+						<div class="col-sm-9">          
+							<input type="text" class="form-control" id="address" placeholder="Enter password" name="address">
+						</div>
+					</div>
+
+					<div class="form-group">        
+						<div class="col-sm-offset-3 col-sm-9">
+							<button type="Update" class="btn btn-default">Submit</button>
+						</div>
+					</div>
+				</form>
+
+
+			</div>
+
+			<div class="w3-container w3-light-grey w3-padding">
+				<button class="w3-button w3-right w3-white w3-border" 
+				onclick="document.getElementById('id01').style.display='none'">Close</button>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<!-- End Modal Popup -->
 	
 <style>
 	.one-order{
@@ -359,69 +352,9 @@ Account
 		cursor: pointer;
 	}
 
-	/* form starting stylings ------------------------------- */
-.my-form-control 			  { 
-  position:relative; 
-  margin-bottom:10px; 
-/*   khoảng cách giữa 2 input type = text */
-}
 
-input[type='text'], input[type='date']{
-  font-size:18px;
-  padding:13px 13px 13px 5px;
-  display:block;
-  width:100%;
-  border:none;
-  background-color: inherit;
-  border-bottom:1px solid #aaa;
-}
-input[type='text']:focus, input[type='date']:focus{outline: none;}
-
-/* LABEL ======================================= */
-label 				 {
-  color:black; 
-  font-size:16px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all;
-}
-
-/* active state */
-input[type='text']:focus ~ label, input[type='date']:focus ~ label, input[type='text']:valid ~ label, input[type='date']:valid ~ label{
-  top:0px;
-  font-size:14px;
-  color:#00FFD8;
-}
-input[type='text']:focus, input[type='date']:focus {
-  border-bottom: 0px;
-  transition:0.1s ease all;
-}
-
-/* BOTTOM BARS ================================= */
-.my-bar 	{ position:relative; display:block; width:100%; }
-.my-bar:before, .my-bar:after{
-  content:'';
-  height:2px; 
-  width:0;
-  position:absolute;
-  background-color:#00FFD8;
-  opacity: 1;
-  transition:0.2s ease all;
-}
-.my-bar:before {
-  left:50%;
-}
-.my-bar:after {
-  right:50%;
-}
-
-/* active state */
-input[type='text']:focus ~ .my-bar:before, input[type='date']:focus ~ .my-bar:before, input[type='text']:focus ~ .my-bar:after, input[type='date']:focus ~ .my-bar:after {
-  opacity: 1;
-  width:50%;
+.my-modal-content {
+	margin:auto;background-color:#fff;position:relative;padding:0;outline:0;
 }
 </style>
 
@@ -432,5 +365,24 @@ input[type='text']:focus ~ .my-bar:before, input[type='date']:focus ~ .my-bar:be
 		if(x.value == "")
 			x.type = 'text';
 	}
+
+	document.getElementsByClassName("tablink")[0].click();
+
+// Modal
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].classList.remove("w3-light-grey");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.classList.add("w3-light-grey");
+}
+// End Modal
+
 </script>
 

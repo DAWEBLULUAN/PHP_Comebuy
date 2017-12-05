@@ -47,21 +47,21 @@
 			<!-- Ask a question -->
 			<div class="col-sm-8 col-xs-12">
 
-				<div class="footer_captions mt">
-					ASK A QUESTION
+				<div class="footer_captions mt" id="contact_form">
+					CONTACT
 				</div>
-				<form action="" class="">
+				<form action="mail.php" method="POST">
 					<div class="input-group" style="margin-top: 20px !important;">
-						<input type="text" placeholder="Your E-Mail" class="question">
+						<input type="text" placeholder="Your E-Mail" name="email" class="question">
 						<div class="underline"></div>
 					</div>
 					<div class="input-group" style="margin-top: 20px !important;">
-						<input type="text" placeholder="Your Message" class="question">
+						<input type="text" placeholder="Your Message" name="message" class="question">
 						<div class="underline"></div>
 					</div>
 
 					<div class="main_button foot" style="margin-top: 20px !important;">
-						<input type="submit" value="SEND">
+						<input type="submit" value="SEND" style="width: 200px !important">
 					</div>
 					<!-- <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 

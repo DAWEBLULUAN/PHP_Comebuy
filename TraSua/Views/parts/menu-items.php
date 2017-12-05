@@ -22,7 +22,7 @@
 	<li><a href="index.php">HOME</a></li>
 	<li><a href="about.php">ABOUT</a></li>
 	<li><a href="menu.php">MENU</a></li>
-	<li><a href="contact.php">CONTACT</a></li>
+	<li><a href="#contact_form">CONTACT</a></li>
 	<li class="w3-dropdown-hover">
 		<a href='<?php echo $link ?>'><?php echo $menu_item_name; ?></a>
 		

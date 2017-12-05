@@ -13,13 +13,13 @@
 	<title>ADMIN</title>
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="../Views/lib/css/BT/bootstrap.css">
-	<!-- <link rel="stylesheet" href="../lib/css/BT/bootstrap.css"> -->
 	<link rel="stylesheet" href="../Views/lib/css/FA/font-awesome.css">
 	<link rel="stylesheet" href="../Views/lib/css/W3/W3.css">
 	<link rel="stylesheet" href="../Views/lib/css/admin-masterpage.css">
 	
 </head>
 <body>
+	
 	<div class="container">
 
 		<!-- Header -->
@@ -28,14 +28,10 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col-xs-6">
-<<<<<<< HEAD
-							<h4>COMEBUY-LU</h4>
-=======
 							<h4><a href="../index.php">COMEBUY</a></h4>
->>>>>>> 49d2325db083410824dca5a010b53b26c6c426b7
 						</div>
 						<div class="col-xs-6">
-							<h4 class="text-right">Luân- Ckó ấy haha</h4>
+							<h4 class="text-right">Luân</h4>
 						</div>
 					</div>
 				</div>
@@ -127,6 +123,7 @@
 			<!-- Right Content -->
 			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
 				<div style="width: 100%; height: auto; background-color: #fff">
+					
 
 					<?php
 						require $page.'.php';
@@ -139,6 +136,8 @@
 			<!-- End Right Content -->
 
 		</div>
+
+
 
 	</div>
 
