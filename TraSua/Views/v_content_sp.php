@@ -1,4 +1,4 @@
-
+<div id="kqAddtoCart" style="height: 5px; background-color: red; width: 100%;"></div>
 <div class="container" >
 <?php 
 foreach ($san_pham as $sp) {
@@ -10,7 +10,13 @@ foreach ($san_pham as $sp) {
 									<div class="line"><center>. . . . . . . . . . . . . . . . . . .</center></div>
 									<!-- Prices -->
 									<div class="price"><center><?php echo $sp->gia_ban ?><sup>đ</sup>
-									<button type="button" class="btn btn-warning"> + </button>
+
+	<button type="button" onclick='ThemSanPhamVaoGioHang(<?php echo json_encode($sp->ma_sp) ?>,
+														<?php echo json_encode($sp->ten_sp) ?>,
+														<?php echo json_encode('1') ?>,
+														<?php echo json_encode($sp->gia_ban) ?>,
+														<?php echo json_encode($sp->hinh_anh) ?>
+													)' class="btn btn-warning"> + </button>
 									</center>
 									</div>
 									<!-- End Prices -->
@@ -21,5 +27,17 @@ foreach ($san_pham as $sp) {
 }
  ?>
   </div>
+  <script type="text/javascript">
+  	function ThemSanPhamVaoGioHang(masp,tensp,soluongsp,dongiasp,hinhanh) {
+  		alert(masp);
+  		var va_route = "addItemToCart";
+  		$.get("cart.php",{route:va_route,masp:masp,tensp:tensp,soluongsp:soluongsp,dongiasp:dongiasp,hinhanhsp:hinhanh},function(data){
+  			$("#kqAddtoCart").html(data);
+  		})
+  	}
+
+
+
+  </script>
 
  
