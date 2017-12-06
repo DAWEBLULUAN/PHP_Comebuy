@@ -101,7 +101,7 @@
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="password">Password:</label>
 						<div class="col-sm-9">          
-							<input type="text" class="form-control password<?php echo $result->id ?>" placeholder="Enter password" name="password" value='<?php echo $result->mat_khau ?>'>
+							<input type="password" class="form-control password<?php echo $result->id ?>" placeholder="Enter password" name="password" value='<?php echo $result->mat_khau ?>'>
 						</div>
 					</div>
 					<div class="form-group">
@@ -201,8 +201,6 @@
 
 	?>
 	
-
-
 </div>
 <!-- End Modal Popup -->
 	

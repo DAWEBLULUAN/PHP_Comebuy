@@ -61,31 +61,13 @@
 
 	</li>
 
-<<<<<<< HEAD
 
+	<!-- <li><a href="cart.php"><span class="w3-orange w3-padding">12</span> CART: <span> 300000đ</span></a></li> -->
 
-	<li><a href="cart.php"><span class="w3-orange w3-padding">12</span> CART: <span> 300000đ</span></a></li>
-=======
-<!-- <<<<<<< HEAD -->
-
-	<li><a href="cart.php"><span class="w3-orange w3-padding"></span> CART</a></li>
-<!-- ======= -->
->>>>>>> f7afe33435524683d71f53959de275ef420224b9
-	<?php
-	// if (isset($menu_item_name)) {
-	?>
-		<!-- <li style='display:<?php echo $display ?>'><a href="signout.php"><i class="fa fa-sign-out"></i></a></li> -->
-	<?php 
-	// }
-	?>	
+	
 <!-- <?php echo $TongSanPham; ?> -->
 <!--   <?php echo $TongTienCart; ?>-->
-<<<<<<< HEAD
 	<li><a href="cart.php"><span class="w3-orange w3-padding"></span> CART<span></span></a></li>
-=======
-	<!-- <li><a href="cart.php"><span class="w3-orange w3-padding"></span> CART<span></span></a></li>
->>>>>>> ea5263fc1a8c9d19ddf17efd3bbff158da5cf314 -->
->>>>>>> f7afe33435524683d71f53959de275ef420224b9
 
 	<!--
 

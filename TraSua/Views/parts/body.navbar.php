@@ -19,7 +19,7 @@
 			<a href="/Project/TraSua">
 				<img src="Views/img/icons/comebuy-logo1.png" alt="comebuy-logo1.png">
 			</a>
-			<a href="/Project/TraSua">
+			<a href="index.php">
 				<div class="site_name">COMEBUY</div>
 			</a>
 		</div>

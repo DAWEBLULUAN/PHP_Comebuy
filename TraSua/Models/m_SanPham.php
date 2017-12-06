@@ -45,7 +45,7 @@ class M_SanPham extends Model
 	{
 		$sql="INSERT INTO san_pham (ma_sp, ten_sp, ma_loai_sp, hinh_anh, gia_ban, gioi_thieu, trang_thai) VALUES ('$optionSP[0]', '$optionSP[1]', '$optionSP[2]', N'$optionSP[3]', '$optionSP[4]','$optionSP[5]',  '1');";
 		$this->setQuery($sql);
-		return ( $this->execute()->rowCount() > 0);
+		return ($this->execute()->rowCount() > 0);
 	}
 }
  ?>

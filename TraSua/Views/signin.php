@@ -25,7 +25,7 @@
 		    </div>
 		      
 		    <div class="my-form-control">      
-		      <input type="text" name="password" required value='<?php if(isset($_COOKIE["password"])) echo $_COOKIE["password"] ?>'>
+		      <input type="password" name="password" required value='<?php if(isset($_COOKIE["password"])) echo $_COOKIE["password"] ?>'>
 		      <span class="my-bar"></span>
 		      <label>Password</label>
 		    </div>

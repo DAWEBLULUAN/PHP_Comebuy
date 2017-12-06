@@ -23,36 +23,31 @@
 	<div class="w3-col s12 m6">
 		
 		<div class="change-password">
-			<?php 
-				if(isset($_COOKIE["username"])) {
-					echo $_COOKIE["username"]." Cookie";
-				}
-				else echo $_SESSION["username"]." Session"."<br>";
-				echo $_SESSION["password"];
-			?>
+			
 			<h3>Change password</h3>
 		  <form action="account.php?route=changePassword" method="post">
 
 		    <div class="my-form-control">      
-		      <input type="text" name="cur_password" required>
+		      <input class="my-input" type="text" name="cur_password" required>
 		      <span class="my-bar"></span>
 		      <label>Recent password</label>
 		    </div>
 		      
 		    <div class="my-form-control">      
-		      <input type="text" name="new_password" required>
+		      <input class="my-input" type="text" name="new_password" required>
 		      <span class="my-bar"></span>
 		      <label>New password</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" name="repeat_password" required>
+		      <input class="my-input" type="text" name="repeat_password" required>
 		      <span class="my-bar"></span>
 		      <label>Re-enter new password</label>
 		    </div>
 
 		    <div><input type="submit" class="w3-btn w3-block w3-red w3-hover-black" value="Change password"></div>
 		  </form>
+
 	  </div>
 	</div>
 	<!-- End Change Password -->

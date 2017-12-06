@@ -4,7 +4,7 @@ class Model
 {
 	protected $conn ='';
 	protected $query ='';
-	protected $cursor =NULL;
+	protected $cursor = NULL;
 
 
 	//Hàm khởi tạo
@@ -22,13 +22,13 @@ class Model
 		}
 	} //End
 
-	//Đóng kết nối
-	public function disconnect()
-	{
-		$this->conn = NULL;
-	} //End
+	// //Đóng kết nối
+	// public function disconnect()
+	// {
+	// 	$this->conn = NULL;
+	// } //End
 
-
+// 
 	//set câu truy vấn
 	public function setQuery($query)
 	{

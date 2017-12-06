@@ -1,6 +1,5 @@
 <?php
 
-	
 	require 'parts/header.php';
 
 
@@ -87,12 +86,12 @@ div.tab button.active {
 				
 <!-- teapresso- milk tea - ceam teaccino- other tea- fruit tea - ice blended -->
 <div class="tab">
-  <button class="tablinks" id="defaultOpen" onclick="openCity(event,'LSP001')">TEAPRESSO</button>
-  <button class="tablinks" onclick="openCity(event,'LSP002')">MILK TEA</button>
-  <button class="tablinks" onclick="openCity(event,'LSP003')">CREAM TEACCINO</button>
-  <button class="tablinks" onclick="openCity(event,'LSP004')">OTHER TEA</button>
-  <button class="tablinks" onclick="openCity(event,'LSP005')">FRUIT TEA</button>
-  <button class="tablinks" onclick="openCity(event,'LSP006')">ICE BLENDED</button>
+  <button class="tablinks" id="LSP001" onclick="openCity(event,'LSP001')">TEAPRESSO</button>
+  <button class="tablinks" id="LSP002" onclick="openCity(event,'LSP002')">MILK TEA</button>
+  <button class="tablinks" id="LSP003" onclick="openCity(event,'LSP003')">CREAM TEACCINO</button>
+  <button class="tablinks" id="LSP004" onclick="openCity(event,'LSP004')">OTHER TEA</button>
+  <button class="tablinks" id="LSP005" onclick="openCity(event,'LSP005')">FRUIT TEA</button>
+  <button class="tablinks" id="LSP006" onclick="openCity(event,'LSP006')">ICE BLENDED</button>
 </div>
 <!--  -->
 
@@ -101,8 +100,12 @@ div.tab button.active {
 
 
 <script>
-	document.getElementById("defaultOpen").click(); // default click tab 1 
+
+	x = <?php echo json_encode($maloai) ?>;
+	alert(x);
+	document.getElementById(x).click(); // default click tab 1 
 	// 
+
 	function openCity(evt,maloaiF) {
   	  var i, tablinks;
  	   tablinks = document.getElementsByClassName("tablinks");
@@ -113,6 +116,7 @@ div.tab button.active {
 // đoạn dưới là ajax xài jquery
   	 	 var loaisp = maloaiF;
   	 	 var indexTrangg =1;
+  	 	 
   	  $.get("phantrang_sp.php",{maloai:loaisp,indexT:indexTrangg},function(data){
   	  	$("#phan_trang").html(data);
  	   })

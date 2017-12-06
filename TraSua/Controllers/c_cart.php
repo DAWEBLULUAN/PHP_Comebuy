@@ -96,7 +96,7 @@ class C_cart
 			 ////ma_hoa_don	ngay_lap	nguoi_lap	sdt_khach_hang	tong_tien	don_vi_tien	trang_thai
 		$optionHD= array();
 		$optionHD[]= $this->TaoMaHD();//mã hd
-		$optionHD[]="2017-05-12"; // ngày lập
+		$optionHD[]=date("Y-m-d"); // ngày lập
 		$optionHD[]="NV001";// người lập
 		$optionHD[]="01634699175";  // sđt
 		$TongTienCart = 0;
