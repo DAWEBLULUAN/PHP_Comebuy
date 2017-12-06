@@ -71,10 +71,15 @@
 
 	  </table>
 	  <br>
+	  <div class="col-lg-offset-10" >
+	  	SĐT:
+	  	<input style="width: 70%; margin-bottom: 20px ; " type="number" name="sdt" min="1" maxlength="2" pattern="[0-9]" value=""  max="150">
+	  </div>
+
 	  <div class="w3-right w3-right-align">
 	  	<input href="" class="w3-round-xxlarge w3-btn w3-hover-red w3-uppercase w3-border-red w3-transition-all-short" onclick="UpdateClick('updateCart')" value="Update cart"> &nbsp;
 	  	<input href="" class="w3-round-xxlarge w3-btn w3-hover-red w3-uppercase w3-border-red w3-transition-all-short" onclick="EmptyClick('emptyCart')" value="Empty cart"> &nbsp;
-	  	<input href="" class="w3-round-xxlarge w3-btn w3-red w3-uppercase w3-border-red w3-hover-black w3-hover-border-black w3-transition-all-short w3-text-black" onclick="PayClick('payCart')" value="Pay">
+	  	<input href="" class="w3-round-xxlarge w3-btn w3-red w3-uppercase w3-border-red w3-hover-black w3-hover-border-black w3-transition-all-short w3-text-black" onclick="PayClick('payCart')" value="SUBMIT CART">
 	  </div>
   </form>
   
