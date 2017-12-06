@@ -33,4 +33,12 @@ class UserModel extends Model
 		$this->setQuery($query);
 		return ($this->execute($options)->rowCount() > 0);
 	}
+
+
+	public function getAll()
+	{
+		$query = "SELECT * FROM nguoi_dung";
+	}
+
+
 }

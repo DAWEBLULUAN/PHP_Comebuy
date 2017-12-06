@@ -12,10 +12,10 @@
 	<meta charset="UTF-8">
 	<title>ADMIN</title>
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="../Views/lib/css/BT/bootstrap.css">
-	<link rel="stylesheet" href="../Views/lib/css/FA/font-awesome.css">
-	<link rel="stylesheet" href="../Views/lib/css/W3/W3.css">
-	<link rel="stylesheet" href="../Views/lib/css/admin-masterpage.css">
+	<link rel="stylesheet" href="Views/lib/css/BT/bootstrap.css">
+	<link rel="stylesheet" href="Views/lib/css/FA/font-awesome.css">
+	<link rel="stylesheet" href="Views/lib/css/W3/W3.css">
+	<link rel="stylesheet" href="Views/lib/css/admin-masterpage.css">
 	
 </head>
 <body>
@@ -28,7 +28,7 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col-xs-6">
-							<h4><a href="../index.php">COMEBUY</a></h4>
+							<h4><a href="index.php">COMEBUY</a></h4>
 						</div>
 						<div class="col-xs-6">
 							<h4 class="text-right">Luân</h4>
@@ -89,7 +89,7 @@
 				      		<span class="nav-header-primary">Account <span class="pull-right"><b class="fa fa-chevron-down"></b></span></span>
 				    	</a>
 				    	<ul class="nav nav-list collapse" id="submenuAccount">
-						    <li class="menu-item" id="show_all_acc">
+						    <li class="menu-item" id="show_all_acc" data-action="accounts">
 						      	<a  class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount1">&nbsp;Show all</a>
 						    </li>
 						    <li>
@@ -144,8 +144,8 @@
 	</div>
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-<script src="../Views/lib/js/jquery-3.1.1.min.js"></script>
-<script src="../Views/lib/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="Views/lib/js/jquery-3.1.1.min.js"></script>
+<script src="Views/lib/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 
 <script>
@@ -182,19 +182,10 @@
 		// });
 
 
-		
-		// $("li.my-menu-item").click(function(){
-  //     if( $(this).find("a span span b").hasClass('fa-chevron-down') ) {
-  //     	$(this).find("a span span b").removeClass('fa-chevron-down').addClass('fa-chevron-up');
-  //     }
-  //     else if( $(this).find("a span span b").hasClass('fa-chevron-up') ) {
-  //     	$(this).find("a span span b").removeClass('fa-chevron-up').addClass('fa-chevron-down');
-  //     }
-  //   });
 
     $("li.menu-item").click(function() {
-    	var x = $(this).attr('id');
-    	$.get('admin_menu_navigation.php?route='+x, function(data) {
+    	var x = $(this).attr('data-action');
+    	$.get('admin.php?route='+x, function(data) {
 	    	$("#right-content").html(data);
 	    });
     });

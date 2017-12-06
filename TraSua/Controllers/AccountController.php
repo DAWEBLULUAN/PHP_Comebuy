@@ -1,7 +1,7 @@
 <?php
 
 
-session_start();
+// session_start();
 
 require 'Models/AccountModel.php';
 class AccountController
@@ -77,12 +77,13 @@ class AccountController
 			$options = array($_POST["new_password"], $_SESSION["account_id"]);
 			if($account_model->changePassword($options))
 			{
+				$_SESSION["password"] = $_POST["new_password"];
 				if(isset($_COOKIE["password"]))
 					setcookie("password", $_POST["new_password"], time() + (3600*3), "/");
 				// else echo "There is no Cookie";
 				header('Location: user.php');
 			}
-		}
+		} else echo "<script>alert('Can\'t change your password'); window.location.href = 'http://localhost/Comebuy/PHP_Comebuy/TraSua/user.php';</script>";
 	}
 
 
@@ -97,9 +98,40 @@ class AccountController
 		return $account_id .= $number;
 	}
 
+
+
 	// END TEST CÁCH KHÁC
 
+	public function showAll()
+	{
+		$account_model = new AccountModel();
 
+		
+		if($account_model->getAll()) {
+			$results = $account_model->getAll();
+			// header('Location: account-management.php');
+			require 'Views/admin/account-management.php';
+		}
+		else require 'Views/no-result.php';
+	}
+
+	public function update()
+	{
+		$account = array();
+
+		if(isset($_POST["account"]))
+			$account[] = $_POST["account"];
+		if(isset($_POST["password"]))
+			$account[] = $_POST["password"];
+		if(isset($_POST["active"]))
+			$account[] = $_POST["active"];
+		if(isset($_POST["id"]))
+			$account[] = $_POST["id"];
+
+		$account_model = new AccountModel();
+		$account_model->update($account);
+		header("Location: admin.php?route=accounts");
+	}
 
 
 

@@ -58,6 +58,13 @@
 			// 	require 'account.php?route=signup';
 		}
 
+
+		public function showAll()
+		{
+			$user_model = new UserModel();
+		}
+
+
 		public function autoGenerateUserId()
 		{
 			$user_model = new UserModel();

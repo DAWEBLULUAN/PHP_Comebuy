@@ -36,4 +36,21 @@ class AccountModel extends Model
 		$this->setQuery($query);
 		return ($this->execute($options)->rowCount() > 0);
 	}
+
+
+	public function getAll()
+	{
+		$query = "SELECT tai_khoan.*, nguoi_dung.*, loai_tai_khoan.ma_loai_tk, loai_tai_khoan.ten_loai_tk FROM tai_khoan, nguoi_dung, loai_tai_khoan WHERE tai_khoan.ma_nguoi_dung = nguoi_dung.ma_nguoi_dung AND tai_khoan.loai_tai_khoan = loai_tai_khoan.ma_loai_tk";
+		$this->setQuery($query);
+		return $this->loadAllRows();
+	}
+
+
+	public function update($options)
+	{
+		$query = "UPDATE tai_khoan SET ten_tk = ?, mat_khau = ?, trang_thai = ? WHERE id = ?";
+		$this->setQuery($query);
+		return ($this->execute($options)->rowCount() > 0);
+	}
+
 }

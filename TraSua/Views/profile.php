@@ -27,7 +27,8 @@
 				if(isset($_COOKIE["username"])) {
 					echo $_COOKIE["username"]." Cookie";
 				}
-				else echo $_SESSION["username"]." Session";
+				else echo $_SESSION["username"]." Session"."<br>";
+				echo $_SESSION["password"];
 			?>
 			<h3>Change password</h3>
 		  <form action="account.php?route=changePassword" method="post">
@@ -76,7 +77,7 @@
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input id="dtpBirthday" type="text" name='birthday' value="<?php if($user->ngay_sinh) echo date_format(date_create($user->ngay_sinh), 'd-m-Y')?>" onfocus="(this.type='date')" onblur="onblurFunction()">
+		      <input id="dtpBirthday" type="text" name='birthday' value="<?php if($user->ngay_sinh) echo date_format(date_create($user->ngay_sinh), 'd-m-Y') ?>" onfocus="(this.type='date')" onblur="onblurFunction()">
 		      <span class="my-bar"></span>
 		      <label>Birthday</label>
 		    </div>
