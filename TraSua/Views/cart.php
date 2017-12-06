@@ -34,8 +34,7 @@
 	
 	<br>
   <div class="w3-right w3-right-align">
-  	<p class="w3-margin-0" ><span>Total: </span><span>300000vnđ</span></p>
-  	<a href="">Đăng nhập để được giảm giá</a>
+  	<p class="w3-margin-0" ><span>Total: </span><span><?php echo $TongTienCart; ?></span></p>
   </div>
   <br>
   
@@ -50,47 +49,32 @@
 	        <th id="amount">Amount</th>
 	      </tr>
 	    </thead>
-	    <tr>
+
+	    <?php
+	    	foreach ($ar_ItemCart as $key => $author) {
+	     ?>
+	     <tr>
 	    	<td class="remove-products"><a " id="btnClose"><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
-	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
+	    	<td width="100px"><img src=<?php echo $author['hinhanhsp']; ?> width="100px" height="100px" alt=""></td>
 	      <td>
-	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
-	      	<span>Size: </span><span>350ml</span> <br>
+	      	<h4 class="product-name"><a href=""><?php echo $author['tensp']; ?></a></h4>
 	      </td>
-	      <td><input type="number" min="1" maxlength="2" pattern="[0-9]" value="1"  max="50"></td>
-	      <td>32000đ</td>
-	      <td>64000đ</td>
+	      <td><input type="number" value=<?php echo $author['soluongsp']; ?> name="soluongsp" min="1" maxlength="2" pattern="[0-9]" value="1"  max="50"></td>
+	      <td><?php echo $author['dongiasp']; ?></td>
+	      <td><?php echo $author['tongtiensp']; ?></td>
 	    </tr>
+	     <?php 
+	 		}
+	      ?>
+	    
 
-	    <tr>
-	    	<td class="remove-products"><a ><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
-	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
-	      <td>
-	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
-	      	<span>Size: </span><span>350ml</span> <br>
-	      </td>
-	      <td><input type="number" min="1" maxlength="2" pattern="[0-9]" value="1"  max="50"></td>
-	      <td>32000đ</td>
-	      <td>64000đ</td>
-	    </tr>
 
-	    <tr>
-	    	<td class="remove-products"><a ><i class="fa fa-close w3-hover-red w3-text-red w3-large" aria-hidden="true"></i></a></td>
-	    	<td width="100px"><img src="Views/img/cart-model/hai-than-min-180x180.png" width="100px" height="100px" alt=""></td>
-	      <td>
-	      	<h4 class="product-name"><a href="">Trà sữa hải thần </a></h4>
-	      	<span>Size: </span><span>350ml</span> <br>
-	      </td>
-	      <td><input type="number" min="1" maxlength="2" pattern="[0-9]" value="1"  max="50"></td>
-	      <td>32000đ</td>
-	      <td>64000đ</td>
-	    </tr>
 	  </table>
 	  <br>
 	  <div class="w3-right w3-right-align">
-	  	<input href="" class="w3-round-xxlarge w3-btn w3-hover-red w3-uppercase w3-border-red w3-transition-all-short" value="Update cart"> &nbsp;
-	  	<input href="" class="w3-round-xxlarge w3-btn w3-hover-red w3-uppercase w3-border-red w3-transition-all-short" value="Empty cart"> &nbsp;
-	  	<input type="submit" class="w3-round-xxlarge w3-btn w3-red w3-uppercase w3-border-red w3-hover-black w3-hover-border-black w3-transition-all-short w3-text-black" value="Pay">
+	  	<input href="" class="w3-round-xxlarge w3-btn w3-hover-red w3-uppercase w3-border-red w3-transition-all-short" onclick="UpdateClick('updateCart')" value="Update cart"> &nbsp;
+	  	<input href="" class="w3-round-xxlarge w3-btn w3-hover-red w3-uppercase w3-border-red w3-transition-all-short" onclick="EmptyClick('emptyCart')" value="Empty cart"> &nbsp;
+	  	<input href="" class="w3-round-xxlarge w3-btn w3-red w3-uppercase w3-border-red w3-hover-black w3-hover-border-black w3-transition-all-short w3-text-black" onclick="PayClick('payCart')" value="Pay">
 	  </div>
   </form>
   
@@ -101,6 +85,24 @@
 ?>
 
 <script>
+	function PayClick(Route) {
+		alert(Route);
+		$.get("cart.php",{route:Route},function(data){
+			location.reload();
+		})
+	}
+	function UpdateClick(Route) {
+		var va_route = Route;
+		$.get("cart.php",{route:va_route},function(data){
+			location.reload();
+		})
+	}
+	function EmptyClick(Route) {
+		 var va_route = Route;
+		$.get("cart.php",{route:va_route},function(data){
+			location.reload();
+		})
+	}
 	$(".remove-products a i.fa-close").click(function() {
 		$(this).parent().parent().parent().hide();
 	});

@@ -12,18 +12,18 @@
 </div>
 
 <div class="container" >
-	<div style="float: left;width: 23%;height: 40%; margin:1%;margin-top: 5%;">
-		<center><img style="width: 250px; height: 250px;" src="" alt="THÊM SP"></center>
-		<div><center>Thêm SP</center></div>
-		<div class="line"><center>. . . . . . . . . . . . . . . . . . .</center></div>
+	<a onclick="clickAddnew()">
+	<div style="float: left;width: 23%;height: 35%; margin:1%;margin-top: 5%; border: 1px solid; border-radius: 3px;">
+		<center><img style="width: 250px; height: 250px;" src="Views/img/addnewsp.png" alt="THÊM SP"></center>
+		
 		<!-- Prices -->
 		<div class="price"><center>
-			<button type="button" onclick="clickAddnew()" class="btn btn-warning"> Thêm sản phẩm </button>
 		</center>
 	</div>
 	<!-- End Prices -->
 	<br>							
 </div>
+</a>
 <?php 
 foreach ($san_pham as $sp) {
 	$linkAnh= $sp->hinh_anh;

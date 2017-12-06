@@ -3,6 +3,8 @@
 	$menu_item_name;
 	$link;
 	$dropdown_class;
+	$TongTienCart = 0;
+		$TongSanPham = 0;
 	if(isset($_SESSION["username"])) {
 		$menu_item_name = $_SESSION["username"];
 		$link = 'user.php';
@@ -16,6 +18,15 @@
 		$dropdown_class = 'w3-hide';
 
 		$display = "none";
+	}
+	if (isset($_SESSION["s_cart"])) {
+		$ar_cart=$_SESSION["s_cart"];
+		$TongTienCart = 0;
+		$TongSanPham = 0;
+		foreach ($ar_cart as $key => $anthor) { 
+			$TongTienCart += $anthor['tongtiensp'];
+			$TongSanPham +=$anthor['soluongsp'];
+		}
 	}
 	?>
 
@@ -50,8 +61,21 @@
 
 	</li>
 
+<<<<<<< HEAD
 
 	<li><a href="cart.php"><span class="w3-orange w3-padding">12</span> CART: <span> 300000đ</span></a></li>
+=======
+	<?php
+	// if (isset($menu_item_name)) {
+	?>
+		<!-- <li style='display:<?php echo $display ?>'><a href="signout.php"><i class="fa fa-sign-out"></i></a></li> -->
+	<?php 
+	// }
+	?>	
+<!-- <?php echo $TongSanPham; ?> -->
+<!--   <?php echo $TongTienCart; ?>-->
+	<li><a href="cart.php"><span class="w3-orange w3-padding"></span> CART<span></span></a></li>
+>>>>>>> ea5263fc1a8c9d19ddf17efd3bbff158da5cf314
 
 	<!--
 
