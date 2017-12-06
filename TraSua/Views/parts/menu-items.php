@@ -31,7 +31,7 @@
 	?>
 
 	<li><a href="index.php">HOME</a></li>
-	<li><a href="about.php">ABOUT</a></li>
+	<li><a href="Views/about.php">ABOUT</a></li>
 	<li><a href="menu.php">MENU</a></li>
 	<li><a href="#contact_form">CONTACT</a></li>
 	<li class="w3-dropdown-hover">
@@ -61,10 +61,9 @@
 
 	</li>
 
-<<<<<<< HEAD
+
 
 	<li><a href="cart.php"><span class="w3-orange w3-padding">12</span> CART: <span> 300000đ</span></a></li>
-=======
 	<?php
 	// if (isset($menu_item_name)) {
 	?>
@@ -75,7 +74,6 @@
 <!-- <?php echo $TongSanPham; ?> -->
 <!--   <?php echo $TongTienCart; ?>-->
 	<li><a href="cart.php"><span class="w3-orange w3-padding"></span> CART<span></span></a></li>
->>>>>>> ea5263fc1a8c9d19ddf17efd3bbff158da5cf314
 
 	<!--
 

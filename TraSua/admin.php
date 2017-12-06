@@ -1,6 +1,8 @@
 <?php
 session_start();
-if($_SESSION["account_type"] == 'LTK001' || $_SESSION["account_type"] == 'LTK002' ) {
+// if(isset($_SESSION["account_type"]) && ( $_SESSION["account_type"] == 'LTK001' || $_SESSION["account_type"] == 'LTK002') && isset($_SESSION["username"]) ) {
+
+if(isset($_SESSION["account_type"]) && ($_SESSION["account_type"] == 'LTK001' || $_SESSION["account_type"] == 'LTK002')) {
 
 
 	if (isset($_GET["route"])) {
@@ -21,7 +23,6 @@ else {
 	header("Location: index.php");
 }
 
-// echo $_SESSION["account_type"];
 
 
 

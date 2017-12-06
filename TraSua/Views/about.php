@@ -605,8 +605,8 @@
 		<!-- END FOOTER -->
 
 	</div>
-	<link rel="stylesheet" href="css/main.min.css">
-	<script src="js/scripts.min.js"></script>
+	<link rel="stylesheet" href="lib/css/main.min.css">
+	<script src="lib/js/scripts.min.js"></script>
 	<!-- <script>
 		var clock = $('.countdown').FlipClock(3600 * 24 * 5, {
 			clockFace: 'DailyCounter',
