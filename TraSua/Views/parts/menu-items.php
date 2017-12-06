@@ -61,10 +61,10 @@
 
 	</li>
 
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
 
-	<li><a href="cart.php"><span class="w3-orange w3-padding">12</span> CART: <span> 300000đ</span></a></li>
-=======
+	<li><a href="cart.php"><span class="w3-orange w3-padding"></span> CART</a></li>
+<!-- ======= -->
 	<?php
 	// if (isset($menu_item_name)) {
 	?>
@@ -74,8 +74,8 @@
 	?>	
 <!-- <?php echo $TongSanPham; ?> -->
 <!--   <?php echo $TongTienCart; ?>-->
-	<li><a href="cart.php"><span class="w3-orange w3-padding"></span> CART<span></span></a></li>
->>>>>>> ea5263fc1a8c9d19ddf17efd3bbff158da5cf314
+	<!-- <li><a href="cart.php"><span class="w3-orange w3-padding"></span> CART<span></span></a></li>
+>>>>>>> ea5263fc1a8c9d19ddf17efd3bbff158da5cf314 -->
 
 	<!--
 

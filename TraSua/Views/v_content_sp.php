@@ -1,4 +1,4 @@
-<div id="kqAddtoCart" style="height: 5px; background-color: red; width: 100%;"></div>
+<div id="kqAddtoCart" style="height: 2px; background-color: brown; width: 100%;"></div>
 <div class="container" >
 <?php 
 foreach ($san_pham as $sp) {
