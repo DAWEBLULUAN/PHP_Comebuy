@@ -2,7 +2,7 @@
 /**
 * 
 */
-session_start();
+// session_start();
 require("Models/m_SanPham.php");
 require("Models/m_HoaDon.php");
 class C_cart 

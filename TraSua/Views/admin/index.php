@@ -1,11 +1,3 @@
-<?php 
-
-	$page = 'admin-default';
-	if(isset($_GET["page"]))
-		$page = $_GET["page"];
-
- ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,185 +8,172 @@
 	<link rel="stylesheet" href="Views/lib/css/FA/font-awesome.css">
 	<link rel="stylesheet" href="Views/lib/css/W3/W3.css">
 	<link rel="stylesheet" href="Views/lib/css/admin-masterpage.css">
-	
+	<style>
+		.dropdown-submenu {
+    	position: relative;
+		}
+		.dropdown-submenu .submenu-title {
+			outline: none;
+		}
+		.dropdown-submenu .dropdown-menu {
+				top        : 0;
+				left       : 100%;
+				margin-top : -1px;
+		}
+	</style>
 </head>
 <body>
+
+
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">COMEBUY</a>
+			</div>
 	
-	<div class="container">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
 
-		<!-- Header -->
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div class="page-header">
-					<div class="row">
-						<div class="col-xs-6">
-							<h4><a href="index.php">COMEBUY</a></h4>
-						</div>
-						<div class="col-xs-6">
-							<h4 class="text-right">Luân</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+					<li class="menu-item" data-route="shop" data-action=""><a href="#">Shop</a></li>
 
-		<!-- Content -->
-		<div class="row">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tea <b class="caret"></b></a>
 
-			<!-- Left - Sidebar Menu -->
-			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<ul class="dropdown-menu">
+							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item"><a href="#">Menu1</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item"><a href="#">Menu1</a></li>
+						</ul>
+					</li>
+
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Multi-level menu <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li class="menu-item"><a href="#">Action</a></li>
+							<li class="menu-item"><a href="#">Another action</a></li>
+							<li class="menu-item"><a href="#">Something else here</a></li>
+							<li class="menu-item"><a href="#">Separated link</a></li>
+
+							<li class="dropdown-submenu">
+								<a class="test submenu-title"  tabindex="-1" href="#">New dropdown<span class="fa fa-chevron-right w3-right"></span></a>
+								<ul class="dropdown-menu">
+									<li class="menu-item"><a tabindex="-1" href="#">2nd level dropdown</a></li>
+									<li class="menu-item"><a tabindex="-1" href="#">2nd level dropdown</a></li>
+									<!-- <li class="dropdown-submenu">
+										<a class="test" href="#">Another dropdown <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">3rd level dropdown</a></li>
+											<li><a href="#">3rd level dropdown</a></li>
+										</ul>
+									</li> -->
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+
+				</ul>
 				
-				<nav id="column_left">	
-					<ul class="nav nav-list">
-				  	<li><a href="?page=admin-default">Menu</a></li>	
-				  	<!-- Shop -->
-				  	<li class="my-menu-item">
-				  		<a class="accordion-heading" data-toggle="collapse" data-target="#submenuShop">
-				      		<span class="nav-header-primary">
-				      			Shop 
-				      			<span class="pull-right">
-				      				<b id="click" class="fa fa-chevron-down"></b>
-				      			</span>
-				      		</span>
-				    	</a>
-				    	<ul class="nav nav-list collapse" id="submenuShop">
-						    <li>
-						      	<a href="?page=shop-info" class="accordion-heading" data-toggle="collapse" data-target="#submenuShop1">&nbsp;Infomation</a>
-						    </li>
-						    <li>
-						      	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuShop2">&nbsp;Something else about shop</a>
-						    </li>
-					    </ul>
-				  	</li>
-				  	<!-- End Shop -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href=""><i class="fa fa-user"></i> Vũ Minh Luân</a></li>
+					<li><a href=""><i class="fa fa-sign-out"></i> Sign-out</a></li>
+				</ul>
 
-						<!-- Products -->
-						<li class="my-menu-item">
-				    	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuProducts">
-				      		<span class="nav-header-primary">Products <span class="pull-right"><b class="fa fa-chevron-down"></b></span></span>
-				    	</a>
-
-					    <ul class="nav nav-list collapse" id="submenuProducts">
-					    	<li><a href="?page=products-tea" title="Title">&nbsp;&nbsp;Tea <span class="badge">12</span></a></li>
-					    	<li><a href="?page=add-products" title="Title">&nbsp;&nbsp;Add new tea</a></li>
-					    </ul>
-				  	</li>
-
-
-						<!-- End Products -->
-						
-						<!-- Account -->
-				  	<li class="my-menu-item">
-				  		<a class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount">
-				      		<span class="nav-header-primary">Account <span class="pull-right"><b class="fa fa-chevron-down"></b></span></span>
-				    	</a>
-				    	<ul class="nav nav-list collapse" id="submenuAccount">
-						    <li class="menu-item" id="show_all_acc" data-action="accounts">
-						      	<a  class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount1">&nbsp;Show all</a>
-						    </li>
-						    <li>
-						      	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount2">&nbsp;Active</a>
-						    </li>
-						    <li>
-						      	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuAccount2">&nbsp;Inactive</a>
-						    </li>
-					    </ul>
-				  	</li>
-				  	<!-- End Account -->
-						
-						<!-- Order -->
-				  	<li class="my-menu-item">
-				  		<a class="accordion-heading" data-toggle="collapse" data-target="#submenuOrder">
-				      		<span class="nav-header-primary">Orders<span class="pull-right"><b class="fa fa-chevron-down"></b></span></span>
-				    	</a>
-				    	<ul class="nav nav-list collapse" id="submenuOrder">
-						    <li class="menu-item" id='show_all_orders'>
-						      	<a class="accordion-heading" data-toggle="collapse" data-target="#submenuOrder1">&nbsp;Show all</a>
-						    </li>
-					    </ul>
-				  	</li>
-				  	<!-- End Order -->
-
-
-					</ul>
-
-				</nav>
-
-			</div>
-			<!-- Eend Left - Sidebar Menu -->
-
-			<!-- Right Content -->
-			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-				<div style="width: 100%; height: auto; background-color: #fff" id="right-content">
-					
-
-					<?php
-						require $page.'.php';
-					?>
-
-
-				</div>
-			</div>
-			<!-- End Right Content -->
+			</div><!-- /.navbar-collapse -->
 
 		</div>
+	</nav>
 
-
-
+	<div id="page-content">
+		<!-- <button id="btn-submit-shop-info">ABC</button> -->
 	</div>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-<script src="Views/lib/js/jquery-3.1.1.min.js"></script>
-<script src="Views/lib/js/bootstrap.min.js" crossorigin="anonymous"></script>
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 
-<script>
-	$(document).ready(function(){
+	<script src="Views/lib/js/jquery-3.1.1.min.js"></script>
+	<script src="Views/lib/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 
-  // 	var li = $('li.my-page-item');
-
-  // 	$(li).click(function() {
-  // 		$(this).siblings().removeClass('active');
-  // 		$(this).addClass('active');
-  // 	});
-
-		// $('.my-previous-page').click(function() {
-	 //    li.each(function(i) {
-  //       if ( $(this).hasClass('active') ) {
-  //         if(i-1 >= 0){
-  //           li.removeClass('active');
-  //           li.eq(i-1).addClass('active');
-  //         }
-  //       }
-	 //    });
-		// });
-
-		// $('.my-next-page').click(function() {
-	 //    li.each(function(i) {
-  //       if ( $(this).hasClass('active') ) {
-  //         if(i+1 < li.length){
-  //           li.removeClass('active');
-  //           li.eq(i+1).addClass('active');
-  //           return false;
-  //         }
-  //       }
-	 //    });
-		// });
+	<script>
+		$(document).ready(function(){
 
 
 
-    $("li.menu-item").click(function() {
-    	var x = $(this).attr('data-action');
-    	$.get('admin.php?route='+x, function(data) {
-	    	$("#right-content").html(data);
+			// Multi-level-dropdown menu
+			$('.dropdown-submenu a.test').on("click", function(e){
+		    $(this).next('ul').toggle();
+		    e.stopPropagation();
+		    e.preventDefault();
+		  });
+		  // END Multi-level-dropdown menu
+
+
+		  // Call to route - with - action
+	    $("li.menu-item").click(function() {
+
+	    	var route = $(this).attr('data-route');
+	    	// alert(route);
+	    	var action = $(this).attr('data-action');
+
+
+	    	$.get(route+'.php?route='+action, function(data) {
+		    	$("#page-content").html(data);
+		    });
 	    });
-    });
-    
-		
-	});
-</script>
+	    // Call to Route with  Action
 
+
+		});
+
+		$("#page-content").on('click', '#btn-submit-shop-info', function() {
+			var route = $(this).attr('data-route');
+    	var action = $(this).attr('data-action');
+
+
+    	var id = $("#shop-id").val();
+			var name = $("#shop-name").val();
+			var phone = $("#shop-phone").val();
+			var email = $("#shop-email").val();
+			var address = $("#shop-address").val();
+
+			// alert(route + " " + action + " " + id);
+
+			$.get(route+'.php?route='+action,
+
+				{id: id, name: name, phone: phone, email: email, address: address},
+
+				function(data) {
+	    		$("#page-content").html(data);
+	    });
+
+		});
+
+		// function test() {
+		// 	var x = document.getElementById("btn-submit-shop-info");
+		// 	var classname = "asdasd";
+  //   alert(classname);
+  // }
+	</script>
 </body>
 </html>
-
-

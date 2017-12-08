@@ -60,10 +60,6 @@
 		
 
 	</li>
-
-
-	<!-- <li><a href="cart.php"><span class="w3-orange w3-padding">12</span> CART: <span> 300000đ</span></a></li> -->
-
 	
 <!-- <?php echo $TongSanPham; ?> -->
 <!--   <?php echo $TongTienCart; ?>-->
