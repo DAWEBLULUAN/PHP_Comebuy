@@ -69,7 +69,7 @@ class AccountController
 	// setcookie("username", "", time() - 3600, "/");
 	// setcookie("password", "", time() - 3600, "/");
 
-		header('Location: account.php');
+		header('Location: index.php');
 	}
 
 	public function changePassword()

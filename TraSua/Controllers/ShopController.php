@@ -40,9 +40,7 @@ class ShopController
 		$shop_m = new ShopModel();
 		$shop_m->update($options);
 		$_SESSION["shop"] = $shop_m->get();
-		require 'Views/admin/shop-info.php';
-
-
+		self::index();
 
 	}
 }

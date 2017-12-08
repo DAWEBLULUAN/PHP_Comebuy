@@ -100,8 +100,9 @@
 				</ul>
 				
 				<ul class="nav navbar-nav navbar-right">
+					<li><a href="admin.php"><i class="fa fa-refresh" aria-hidden='true'></i> Refresh</a></li>
 					<li><a href=""><i class="fa fa-user"></i> Vũ Minh Luân</a></li>
-					<li><a href=""><i class="fa fa-sign-out"></i> Sign-out</a></li>
+					<li><a href="account.php?route=signout"><i class="fa fa-sign-out"></i> Sign out</a></li>
 				</ul>
 
 			</div><!-- /.navbar-collapse -->

@@ -1,7 +1,7 @@
 
 <div class="container">
   <h2>Shop infomation</h2>
-  <form action="" method="get">
+  <!-- <form action="" method="get"> -->
     <div class="form-group">
       <label for="shop-name">Name:</label>
       <input type="text" class="form-control" id="shop-name" maxlength="100" placeholder="Enter shop name" name="shop-name" value='<?= $_SESSION["shop"]->ten_cua_hang ?>'>
@@ -20,6 +20,6 @@
     </div>
     <button type="submit" id="btn-submit-shop-info" data-route="shop" data-action="update" class="btn btn-danger">Update</button>
     <input type="hidden" id="shop-id"  value='<?= $_SESSION["shop"]->ma_cua_hang ?>'>
-  </form>
+  <!-- </form> -->
 
 </div>
