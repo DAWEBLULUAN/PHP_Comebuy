@@ -1,5 +1,5 @@
 <center><h3>Chỉnh sửa sản phẩm</h3></center>
-<form action="quanly_sp?route=confirmEdit" method="post" enctype="multipart/form-data">
+<form action="quanly_sp.php?route=confirmEdit" method="post" enctype="multipart/form-data">
 	<div class="form-group col-lg-6">
     <label for="product-image">Chọn hình ảnh:</label>
     <input type="file" name="product-image" class="form-control" id="product-image">

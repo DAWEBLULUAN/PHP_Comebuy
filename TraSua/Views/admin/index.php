@@ -3,11 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ADMIN</title>
+
+	<link rel="icon" type="image/png" href="Views/img/icons/favicon.png" sizes="32x32">
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="Views/lib/css/BT/bootstrap.css">
 	<link rel="stylesheet" href="Views/lib/css/FA/font-awesome.css">
 	<link rel="stylesheet" href="Views/lib/css/W3/W3.css">
 	<link rel="stylesheet" href="Views/lib/css/admin-masterpage.css">
+
 	<style>
 		.dropdown-submenu {
     	position: relative;
@@ -16,9 +19,9 @@
 			outline: none;
 		}
 		.dropdown-submenu .dropdown-menu {
-				top        : 0;
-				left       : 100%;
-				margin-top : -1px;
+			top        : 0;
+			left       : 100%;
+			margin-top : -1px;
 		}
 	</style>
 </head>
@@ -48,7 +51,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tea <b class="caret"></b></a>
 
 						<ul class="dropdown-menu">
-							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item" data-route="quanly_sp" data-action=""><a href="#">Tea</a></li>
 							<li class="menu-item"><a href="#">Menu1</a></li>
 							<li class="menu-item"><a href="#">Menu1</a></li>
 							<li class="menu-item"><a href="#">Menu1</a></li>

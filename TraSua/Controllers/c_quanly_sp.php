@@ -43,6 +43,7 @@ class C_qlsp
 		$san_pham= $msp->Doc_mon_an();
 		require("Views/admin/v_quanly_sp.php");
 	}
+	
 	public function ThemSP()
 	{
 		$optionSP= array();
