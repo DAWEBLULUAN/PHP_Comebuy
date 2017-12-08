@@ -10,7 +10,7 @@
 /*   khoảng cách giữa 2 input type = text */
 }
 
-input[type='text'], input[type='date']{
+input.my-input{
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
@@ -18,7 +18,7 @@ input[type='text'], input[type='date']{
   border:none;
   border-bottom:1px solid #ddd;
 }
-input[type='text']:focus, input[type='date']:focus{ outline:none; }
+input.my-input:focus{ outline:none; }
 
 /* LABEL ======================================= */
 label{
@@ -33,13 +33,13 @@ label{
 }
 
 /* active state */
-input[type='text']:focus ~ label, input[type='date']:focus ~ label, input[type='text']:valid ~ label, input[type='date']:valid ~ label{
+input.my-input:focus ~ label, input.my-input:valid ~ label{
   top:-5px;
   font-size:14px;
   color:#5264AE;
 }
 
-input[type='text']:focus, input[type='date']:focus {
+input.my-input:focus {
   border-bottom: 0px;
   transition:0.1s ease all;
 }
@@ -63,7 +63,7 @@ input[type='text']:focus, input[type='date']:focus {
 }
 
 /* active state */
-input[type='text']:focus ~ .my-bar:before, input[type='date']:focus ~ .my-bar:before, input[type='text']:focus ~ .my-bar:after, input[type='date']:focus ~ .my-bar:after {
+input.my-input:focus ~ .my-bar:before, input.my-input:focus ~ .my-bar:after{
   opacity: 1;
   width:50%;
 }

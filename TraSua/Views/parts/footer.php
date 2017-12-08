@@ -9,8 +9,8 @@
 				<a href="/Project/TraSua">
 					<img src="Views/img/icons/comebuy-logo1.png" alt="comebuy-logo1.png">
 				</a>
-				<a href="/Project/TraSua">
-					<div class="site_name">COMEBUY</div>
+				<a href="index.php">
+					<div class="site_name"><?= $_SESSION["shop"]->ten_cua_hang ?></div>
 				</a>
 
 			</div>
@@ -34,9 +34,9 @@
 					CONTACT US
 
 					<ul>
-						<li><i class="fa fa-map-marker" aria-hidden="true"></i> London, Baker-Street</li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i>187-228-1488<div>187-228-1488</div></li>
-						<li><i class="fa fa-envelope-o" aria-hidden="true"></i>hello@delicate.com</li>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i> <?= $_SESSION["shop"]->dia_chi ?></li>
+						<li><i class="fa fa-phone" aria-hidden="true"></i><?= $_SESSION["shop"]->so_dien_thoai ?></li>
+						<li><i class="fa fa-envelope-o" aria-hidden="true"></i><?= $_SESSION["shop"]->email ?></li>
 					</ul>
 
 				</div>
@@ -89,7 +89,7 @@
 		<div class="container">
 
 			<div class="col-lg-4">Copyright © 2017. All rights reserved.</div>
-			<div class="col-lg-4 w3-wide">COMEBUY VN</div>
+			<div class="col-lg-4 w3-wide"><?= $_SESSION["shop"]->ten_cua_hang ?></div>
 
 			<!-- Icons-links -->
 			<ul>

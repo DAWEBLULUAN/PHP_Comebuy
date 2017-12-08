@@ -28,19 +28,19 @@
 		  <form action="account.php?route=changePassword" method="post">
 
 		    <div class="my-form-control">      
-		      <input class="my-input" type="text" name="cur_password" required>
+		      <input class="my-input" type="password" name="cur_password" required>
 		      <span class="my-bar"></span>
 		      <label>Recent password</label>
 		    </div>
 		      
 		    <div class="my-form-control">      
-		      <input class="my-input" type="text" name="new_password" required>
+		      <input class="my-input" type="password" name="new_password" required>
 		      <span class="my-bar"></span>
 		      <label>New password</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input class="my-input" type="text" name="repeat_password" required>
+		      <input class="my-input" type="password" name="repeat_password" required>
 		      <span class="my-bar"></span>
 		      <label>Re-enter new password</label>
 		    </div>
@@ -60,7 +60,7 @@
 		  <form action="user.php?route=update" method = 'post'>
 
 		    <div class="my-form-control">      
-		      <input type="text" name='name' value="<?= $user->ten_nguoi_dung?>" required>
+		      <input class="my-input" type="text" name='name' value="<?= $user->ten_nguoi_dung?>" required>
 		      <span class="my-bar"></span>
 		      <label>Name</label>
 		    </div>
@@ -72,25 +72,25 @@
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input id="dtpBirthday" type="text" name='birthday' value="<?php if($user->ngay_sinh) echo date_format(date_create($user->ngay_sinh), 'd-m-Y') ?>" onfocus="(this.type='date')" onblur="onblurFunction()">
+		      <input class="my-input" id="dtpBirthday" type="date" name='birthday' value="<?php echo $user->ngay_sinh ?>" >
 		      <span class="my-bar"></span>
 		      <label>Birthday</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" name='phone' value='<?=$user->so_dien_thoai?>' required>
+		      <input class="my-input" type="text" name='phone' value='<?=$user->so_dien_thoai?>' required>
 		      <span class="my-bar"></span>
 		      <label>Phone number</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" name='email' value='<?=$user->email?>'>
+		      <input class="my-input" type="text" name='email' value='<?=$user->email?>'>
 		      <span class="my-bar"></span>
 		      <label>Email</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" name='address' required value='<?=$user->dia_chi?>'>
+		      <input class="my-input" type="text" name='address' required value='<?=$user->dia_chi?>'>
 		      <span class="my-bar"></span>
 		      <label>Address</label>
 		    </div>
@@ -116,11 +116,21 @@
 
 </style>
 <script>
-	function onblurFunction() {
-		var dtp = document.getElementById("dtpBirthday");
+	function onblurInputTypeDate() {
+		var dtp = document.getElementById("abc");
 		if(dtp.value == "")
 			dtp.type = 'text';
 	}
+
+	function onfocusInputTypeDate() {
+		var dtp = document.getElementById("abc");
+		dtp.type = 'date';
+		var x = <?php echo json_encode($user->ngay_sinh) ?>;
+		dtp.value = x;
+
+	}
+
+
 	var x = <?php echo json_encode($user->gioi_tinh); ?>;
 	if(x == 1)
 		document.getElementById("rdbMale").checked = true;

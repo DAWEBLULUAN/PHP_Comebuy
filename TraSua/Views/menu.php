@@ -102,7 +102,6 @@ div.tab button.active {
 <script>
 
 	x = <?php echo json_encode($maloai) ?>;
-	alert(x);
 	document.getElementById(x).click(); // default click tab 1 
 	// 
 

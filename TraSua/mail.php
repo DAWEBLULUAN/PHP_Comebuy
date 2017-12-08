@@ -1,4 +1,5 @@
 <?php
+session_start();
 	$email = $_POST['email'];
 	$message = $_POST['message'];
 	$formcontent=" Message: $message";

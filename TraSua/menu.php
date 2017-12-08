@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include ("Controllers/C_SanPham.php");
 $c_sanpham = new C_sanpham();
 

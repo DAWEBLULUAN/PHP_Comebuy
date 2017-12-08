@@ -19,6 +19,8 @@ class AccountController
 	{
 		if(isset($_POST["username"]) && isset($_POST["password"])) {
 			self::check();
+			// echo $_POST["username"];
+			// echo $_POST["password"];
 		}
 	}
 
@@ -161,6 +163,7 @@ class AccountController
 	{
 		$account_model = new AccountModel();
 		$options = array($_POST["username"], $_POST["password"]);
+		// print_r($options);
 		$result = $account_model->check($options);
 		if ($result) {
 			//Nếu đăng nhập thành công
@@ -183,7 +186,8 @@ class AccountController
 			
 		} else {
 			//Đăng nhập thất bại
-			self::showSignin();
+			// self::showSignin();
+			require 'Views/signin.php';
 		}
 		
 	}

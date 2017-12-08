@@ -32,7 +32,7 @@
 		    <div class="my-form-control">
 		    	<input type="checkbox" name="remember_me" style="display: inline-block; width: auto; text-align: left">&nbsp;&nbsp;<span style="display: inline-block;">Remember me</span>
 		    </div>
-		    <div><a href="signup.php" id="signup-link">Sign up</a>&nbsp;&nbsp;&nbsp;<a href="">Forgot password</a></div>
+		    <div><a href="account.php?route=signup" id="signup-link">Sign up</a>&nbsp;&nbsp;&nbsp;<a href="">Forgot password</a></div>
 			  <br>
 			  <div><input type="submit" class="w3-btn w3-block w3-red w3-hover-black" value="Sign in"></div>
 		  </form>
