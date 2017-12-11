@@ -1,9 +1,6 @@
 
 <div id="content_sp_phan_trang">
-	
 </div>
-
-
 <div style="text-align: center;" >
 	<button  type="button" class="btn btn-success" onclick='btnBack(<?php echo json_encode($maloai)?>,<?=$tranghientai?>)'>Back</button>
 

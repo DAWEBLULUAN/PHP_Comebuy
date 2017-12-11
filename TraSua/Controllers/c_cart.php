@@ -93,12 +93,15 @@ class C_cart
 		echo "đã nhảy vào hàm payCart";
 		if (isset($_SESSION["s_cart"])) {
 			$ar_cart = $_SESSION["s_cart"];
+		if (isset($_GET["sdt"])) 
+			$sdt = $_GET["sdt"];
+		
 			 ////ma_hoa_don	ngay_lap	nguoi_lap	sdt_khach_hang	tong_tien	don_vi_tien	trang_thai
 		$optionHD= array();
 		$optionHD[]= $this->TaoMaHD();//mã hd
 		$optionHD[]=date("Y-m-d"); // ngày lập
 		$optionHD[]="NV001";// người lập
-		$optionHD[]="01634699175";  // sđt
+		$optionHD[]=$sdt;  // sđt
 		$TongTienCart = 0;
 		foreach ($ar_cart as $key => $anthor) { $TongTienCart += $anthor['tongtiensp'];}
 		$optionHD[]=$TongTienCart; // tổng tiền

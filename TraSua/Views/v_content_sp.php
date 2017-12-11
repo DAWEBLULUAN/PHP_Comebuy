@@ -44,16 +44,25 @@
 
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal"  class="modal">
 
 	<!-- Modal content -->
-	<div class="modal-content">
-		<span class="close">&times;</span>
-		Tên sản phẩm:
-		<input type="text" id="iptensanphamm" >
-		Số lượng:
-		<input type="text" value="1" id="ipsoluongg">
-		<button type="button" onclick='Xacnhanthemsanpham()' class="btn-success">Thêm vào giỏ hàng</button>
+	<div class="modal-content container" >
+		<span onclick="CloseModal()" class="close">&times;</span>
+		<div >
+			<center><img id="imagemodal" style="width: 150px; height: 150px;"  alt="coffe cup"></center>
+		</div>
+		<div style="padding-top: 55px;">
+		<p><strong>Tên sản phẩm:</strong></p>
+		<input class="w3-input"  id="iptensanphamm" type="text">
+		<p><strong>Số lượng:</strong></p>
+		<input class="w3-input" type="text" value="1" id="ipsoluongg">
+		<div style="margin-top: 20px;">
+			<button style="float: right;"  class="w3-button w3-white w3-border w3-border-blue"  onclick='Xacnhanthemsanpham()'>Thêm vào giỏ hàng</button>
+		</div>
+		
+		</div>
+		
 	</div>
 
 </div>
@@ -72,12 +81,12 @@
 			<!-- Prices -->
 			<div class="price"><center><?php echo $sp->gia_ban ?><sup>đ</sup>
 <!--  -->
-				<a id="myBtn"><button  type="button" onclick='ThemSanPhamVaoGioHang(<?php echo json_encode($sp->ma_sp) ?>,
+				<a class="myBtn" ><button  type="button" onclick='ThemSanPhamVaoGioHang(<?php echo json_encode($sp->ma_sp) ?>,
 					<?php echo json_encode($sp->ten_sp) ?>,
 					<?php echo json_encode('1') ?>,
 					<?php echo json_encode($sp->gia_ban) ?>,
 					<?php echo json_encode($sp->hinh_anh) ?>
-					)' class="btn btn-warning" > + </button></a>
+					)' class="btn btn-warning " > + </button></a>
 				</center>
 				
 			</div>
@@ -103,6 +112,8 @@
 	 			sdongiasp=dongiasp;
 				shinhanh=hinhanh;
 				$("#iptensanphamm").val(tensp);
+				document.getElementById("imagemodal").src=shinhanh;
+				modal.style.display = "block";
 	}
 
 	function Xacnhanthemsanpham() {
@@ -111,13 +122,22 @@
 		$.get("cart.php",{route:va_route,masp:smasp,tensp:stensp,soluongsp:ssoluongsp,dongiasp:sdongiasp,hinhanhsp:shinhanh},function(data){
 			$("#kqAddtoCart").html(data);
 		})
+		modal.style.display = "none";
+
+	}
+	function CloseModal() {
+		modal.style.display = "none";
+	}
+	function OpenModal() {
+		modal.style.display= "block";
 	}
 // jvs modal
 // Get the modal
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+
+//var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];

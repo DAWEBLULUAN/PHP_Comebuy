@@ -79,6 +79,13 @@ class C_qlsp
 		} 
 		//require("Views/admin/add-products.php");
 	}
+	public function TimKiem()
+	{
+		// $msp = new M_SanPham();
+		// $san_pham= $msp->Doc_mon_an();
+		// require("Views/admin/v_quanly_sp.php");
+		echo "ABC";
+	}
 }
 
 
