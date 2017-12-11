@@ -59,10 +59,21 @@
 					</li>
 
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Accounts <b class="caret"></b></a>
 
 						<ul class="dropdown-menu">
+							<li data-route="account" data-action="all" class="menu-item"><a href="#">Accounts</a></li>
 							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item"><a href="#">Menu1</a></li>
+							<li class="menu-item"><a href="#">Menu1</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Orders <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li class="menu-item"><a href="#">Orders</a></li>
 							<li class="menu-item"><a href="#">Menu1</a></li>
 							<li class="menu-item"><a href="#">Menu1</a></li>
 							<li class="menu-item"><a href="#">Menu1</a></li>
@@ -80,17 +91,17 @@
 							<li class="menu-item"><a href="#">Separated link</a></li>
 
 							<li class="dropdown-submenu">
-								<a class="test submenu-title"  tabindex="-1" href="#">New dropdown<span class="fa fa-chevron-right w3-right"></span></a>
+								<a class="test submenu-title"  tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li class="menu-item"><a tabindex="-1" href="#">2nd level dropdown</a></li>
 									<li class="menu-item"><a tabindex="-1" href="#">2nd level dropdown</a></li>
-									<!-- <li class="dropdown-submenu">
+									<li class="dropdown-submenu">
 										<a class="test" href="#">Another dropdown <span class="caret"></span></a>
 										<ul class="dropdown-menu">
 											<li><a href="#">3rd level dropdown</a></li>
 											<li><a href="#">3rd level dropdown</a></li>
-										</ul>
-									</li> -->
+										</ul>	
+									</li>
 								</ul>
 							</li>
 						</ul>
@@ -163,11 +174,12 @@
 
 			// alert(route + " " + action + " " + id);
 
-			$.get(route+'.php?route='+action,
+			$.post(route+'.php?route='+action,
 
 				{id: id, name: name, phone: phone, email: email, address: address},
 
 				function(data) {
+					alert("Your Shop is updated");
 	    		$("#page-content").html(data);
 	    });
 

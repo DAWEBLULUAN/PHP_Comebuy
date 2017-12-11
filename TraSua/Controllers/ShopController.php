@@ -28,11 +28,11 @@ class ShopController
 	public function update()
 	{
 		$options = array();
-		$options[] = $_GET["name"];
-		$options[] = $_GET["phone"];
-		$options[] = $_GET["address"];
-		$options[] = $_GET["email"];
-		$options[] = $_GET["id"];
+		$options[] = $_POST["name"];
+		$options[] = $_POST["phone"];
+		$options[] = $_POST["address"];
+		$options[] = $_POST["email"];
+		$options[] = $_POST["id"];
 
 		// print_r($options);
 

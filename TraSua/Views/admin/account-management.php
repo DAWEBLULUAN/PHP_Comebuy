@@ -1,16 +1,20 @@
-
-<div class="row">
+<style>
+	/*.lock-or-unlock{ margin-right: 10px; }*/
+</style>
+<div class="container">
 	<?php 
 
 		foreach ($results as $result) {
 		?>
 
-		<div class="col-xs-12 col-lg-6 one-order">
+		<div class="col-xs-12 col-lg-4 one-order">
 			<div class="w3-card-4">
 				<form action="" method="post">
 			    <header class="w3-container w3-light-grey w3-display-container">
 			      <h4><?=$result->ten_loai_tk?></h4>
-			      <a href="javascript: void(0)"><i class="w3-display-topright w3-display-hover fa fa-close" style="right:5px; top: 5px;" aria-hidden="true"></i></a>
+			      <span class="status" id='' data-active='<?= $result->trang_thai ?>' style='display: <?php if($result->trang_thai == 0) echo "none" ?>' class="lock-or-unlock"><i class="w3-display-topright fa fa-lock" style="right:5px; top: 5px;" aria-hidden="true"></i></span>
+
+			      <span class="status" data-active='<?= $result->trang_thai ?>' style='display: <?php if($result->trang_thai == 1) echo "none" ?>' class="lock-or-unlock"><i class="w3-display-topright fa fa-unlock" style="right:5px; top: 5px;" aria-hidden="true"></i></span>
 			    </header>
 			    <div class="w3-container">
 			    	<br>
@@ -34,11 +38,13 @@
 			    	</table>
 			    </div>
 			    <br>
-			    <div class="w3-container">
+
+					<div class="w3-container">
 				    <button class="w3-button w3-dark-grey">Upgrade</button>
 				    <button class="w3-button w3-dark-grey">Downgrade</button>
 			    </div>
 			    <br>
+			    
 			    <a style="text-decoration: none;" class="w3-button w3-block w3-dark-grey" onclick='document.getElementById(<?php echo json_encode($result->id) ?>).style.display="block"'>View</a>
 		    </form>
 		  </div>
@@ -91,7 +97,7 @@
 
 			<div id='<?php echo $result->id."account"; ?>' class="w3-container city">
 				<h1 class="text-center"><?=$result->ten_loai_tk?></h1>
-				<form class="form-horizontal" action="" method="post">
+				<div class="form-horizontal">
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="account">Account:</label>
 						<div class="col-sm-9">
@@ -110,13 +116,13 @@
 							<input type="date" class="form-control" id="created-day" placeholder="Enter password" name="created_day" value='<?php echo date('Y-m-d',strtotime($result->ngay_tao)) ?>'>
 						</div>
 					</div>
-					<div class="form-group"> 
+					<!-- <div class="form-group"> 
 						<div class="col-sm-offset-3 col-sm-9">
 							<div class="checkbox">
-								<label><input class="active<?php echo $result->id ?>" type="checkbox" <?php if($result->trang_thai) echo "checked"; ?> value='active'> Active</label>
+								<label><input class="active<?php  $result->id ?>" type="checkbox" <?php if($result->trang_thai) ; ?> value='active'> Active</label>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 
 
@@ -127,7 +133,7 @@
 						</div>
 					</div>
 					<!-- Button Update Account -->
-				</form>
+				</div>
 			</div>
 
 			<div id='<?php echo $result->id."private-information"; ?>' class="w3-container city">
@@ -212,17 +218,22 @@
 		margin: 10px 0px;
 	}
 	.my-pagination{
-		text-align: center;
-		user-select: none;
+		text-align  : center;
+		user-select : none;
 	}
 	.my-previous-page a, .my-next-page a{
 		cursor: pointer;
 	}
 
 
-.my-modal-content {
-	margin:auto;background-color:#fff;position:relative;padding:0;outline:0;
-}
+	.my-modal-content {
+		margin:auto;background-color:#fff;position:relative;padding:0;outline:0;
+	}
+
+	.status{
+		cursor: pointer;
+	}
+
 </style>
 
 
@@ -237,34 +248,38 @@
 				active = 1;
 			}
 			$.post('account.php?route=update', {id: id, account: account, password: password, active: active}, function(data) {
-				/*optional stuff to do after success */
+				alert("Updated");
+				$("#page-content").html(data);
 			});
 		});
 	});
 
 
 	function onblurFunction(x) {
-		// var dtp = document.getElementsByClassName("dtpBirthday");
 		if(x.value == "")
 			x.type = 'text';
 	}
 
-	document.getElementsByClassName("tablink")[0].click();
+	// document.getElementsByClassName("tablink")[0].click();
+
+
 
 // Modal
 function openCity(evt, cityName) {
   var i, x, tablinks;
-  x = document.getElementsByClassName("city");
+  x = document.getElementsByClassName('city');
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < x.length; i++) {
-    tablinks[i].classList.remove("w3-light-grey");
+    tablinks[i].classList.remove("w3-grey");
   }
   document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.classList.add("w3-light-grey");
+  evt.currentTarget.classList.add("w3-grey");
 }
+
+
 // End Modal
 
 

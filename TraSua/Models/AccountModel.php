@@ -40,7 +40,7 @@ class AccountModel extends Model
 
 	public function getAll()
 	{
-		$query = "SELECT tai_khoan.*, nguoi_dung.*, loai_tai_khoan.ma_loai_tk, loai_tai_khoan.ten_loai_tk FROM tai_khoan, nguoi_dung, loai_tai_khoan WHERE tai_khoan.ma_nguoi_dung = nguoi_dung.ma_nguoi_dung AND tai_khoan.loai_tai_khoan = loai_tai_khoan.ma_loai_tk";
+		$query = "SELECT tai_khoan.*, nguoi_dung.*, loai_tai_khoan.ma_loai_tk, loai_tai_khoan.ten_loai_tk FROM tai_khoan, nguoi_dung, loai_tai_khoan WHERE tai_khoan.id = nguoi_dung.tai_khoan_id AND tai_khoan.loai_tai_khoan = loai_tai_khoan.ma_loai_tk";
 		$this->setQuery($query);
 		return $this->loadAllRows();
 	}

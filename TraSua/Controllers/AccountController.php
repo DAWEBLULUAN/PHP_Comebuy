@@ -104,7 +104,7 @@ class AccountController
 
 	// END TEST CÁCH KHÁC
 
-	public function showAll()
+	public function all()
 	{
 		$account_model = new AccountModel();
 
@@ -132,7 +132,8 @@ class AccountController
 
 		$account_model = new AccountModel();
 		$account_model->update($account);
-		header("Location: admin.php?route=accounts");
+		// header("Location: admin.php?route=accounts");
+		self::all();
 	}
 
 
