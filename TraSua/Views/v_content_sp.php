@@ -1,3 +1,64 @@
+<head>
+	<style type="text/css">
+	/* The Modal (background) */
+	.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+		background-color: #fefefe;
+		margin: 15% auto; /* 15% from the top and centered */
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%; /* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button */
+	.close {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+</style>
+</head>
+
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		Tên sản phẩm:
+		<input type="text" id="iptensanphamm" >
+		Số lượng:
+		<input type="text" value="1" id="ipsoluongg">
+		<button type="button" onclick='Xacnhanthemsanpham()' class="btn-success">Thêm vào giỏ hàng</button>
+	</div>
+
+</div>
+
+<!-- End Modal -->
 <div id="kqAddtoCart" style="height: 2px; background-color: brown; width: 100%;"></div>
 <div class="container" >
 	<?php 
@@ -10,14 +71,15 @@
 			<div class="line"><center>. . . . . . . . . . . . . . . . . . .</center></div>
 			<!-- Prices -->
 			<div class="price"><center><?php echo $sp->gia_ban ?><sup>đ</sup>
-
-				<button type="button" onclick='ThemSanPhamVaoGioHang(<?php echo json_encode($sp->ma_sp) ?>,
+<!--  -->
+				<a id="myBtn"><button  type="button" onclick='ThemSanPhamVaoGioHang(<?php echo json_encode($sp->ma_sp) ?>,
 					<?php echo json_encode($sp->ten_sp) ?>,
 					<?php echo json_encode('1') ?>,
 					<?php echo json_encode($sp->gia_ban) ?>,
 					<?php echo json_encode($sp->hinh_anh) ?>
-					)' class="btn btn-warning"> + </button>
+					)' class="btn btn-warning" > + </button></a>
 				</center>
+				
 			</div>
 			<!-- End Prices -->
 			<br>							
@@ -28,16 +90,56 @@
 	?>
 </div>
 <script type="text/javascript">
+	var smasp="abc";
+	var stensp="abc";
+	var ssoluongsp="abc";
+	var sdongiasp="abc";
+	var shinhanh="abc";
 	function ThemSanPhamVaoGioHang(masp,tensp,soluongsp,dongiasp,hinhanh) {
-  		// alert(masp);
-  		var va_route = "addItemToCart";
-  		$.get("cart.php",{route:va_route,masp:masp,tensp:tensp,soluongsp:soluongsp,dongiasp:dongiasp,hinhanhsp:hinhanh},function(data){
-  			$("#kqAddtoCart").html(data);
-  		})
-  	}
+		
+				smasp=masp;
+				stensp=tensp;
+				ssoluongsp=soluongsp;
+	 			sdongiasp=dongiasp;
+				shinhanh=hinhanh;
+				$("#iptensanphamm").val(tensp);
+	}
 
+	function Xacnhanthemsanpham() {
+		var va_route = "addItemToCart";
+		ssoluongsp = $("#ipsoluongg").val();
+		$.get("cart.php",{route:va_route,masp:smasp,tensp:stensp,soluongsp:ssoluongsp,dongiasp:sdongiasp,hinhanhsp:shinhanh},function(data){
+			$("#kqAddtoCart").html(data);
+		})
+	}
+// jvs modal
+// Get the modal
+var modal = document.getElementById('myModal');
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
-  </script>
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-  
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+	modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+	modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+
+//$('#ipsoluong').text="1212";
+
+</script>
+
