@@ -6,15 +6,42 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- End CSS - LU -->
+	<!-- <style> 
+	input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://www.w3schools.com/howto/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style> -->
 </head>
-<div class="container">
+<div id="mainContent" class="container">
 	<div id="head_them_xoa_sua"></div>
 </div>
+<!-- <div style="margin-top: 20px;margin-left: 8%;" class="container">
+<form>
+  <input type="text" id="strTimKiem"   placeholder="Search..">
+  
+</form>
+<button style="float: right;"  class="w3-button w3-white w3-border w3-border-blue"  onclick="TimKiem()">Tìm</button>
+</div> -->
 
 <div class="container" >
 	<a onclick="clickAddnew()">
-	<div style="float: left;width: 23%;height: 35%; margin:1%;margin-top: 5%; border: 1px solid; border-radius: 3px;">
-		<center><img style="width: 250px; height: 250px;" src="Views/img/addnewsp.png" alt="THÊM SP"></center>
+	<div style="float: left;width: 23%;height: 35%; margin:1%;margin-top: 5%; border-radius: 3px;">
+		<center><img style="width: 250px; height: 250px; border: 1px solid;" src="Views/img/addnewsp.png" alt="THÊM SP"></center>
 		
 		<!-- Prices -->
 		<div class="price"><center>
@@ -50,6 +77,13 @@ foreach ($san_pham as $sp) {
 </div>
 
 <script>
+	function TimKiem() {
+		var strTim = $("$strTimKiem").val();
+		var route ="TimKiem";
+		$.get("quanly_sp.php",{route:route,strTimKiem:strTim},function(data){
+			$("#mainContent").html(data);
+		})
+	}
 	function clickAddnew()
 	{
 		$.get("Themsanpham.php",{},function(data){
