@@ -35,7 +35,7 @@ class C_addsp
 	public function TaoMaSP()
 	{
 		$m_sanpham = new M_SanPham();
-		$dem_san_pham=$m_sanpham->Doc_mon_an();
+		$dem_san_pham=$m_sanpham->Doc_so_luong_mon_an();
 		$soluongsp=count($dem_san_pham)+1;
 		$sp_id="SP";
 		for ($i=0; $i < 6-strlen("SP".$soluongsp); $i++) { 

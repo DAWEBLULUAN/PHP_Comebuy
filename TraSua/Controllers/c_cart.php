@@ -113,7 +113,7 @@ class C_cart
 		if($kq)
 		{
 			echo "Thêm thành công";
-			session_unset($_SESSION["s_cart"]);
+			unset($_SESSION["s_cart"]);
 		} 
 
 			 }
