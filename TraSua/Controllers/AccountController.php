@@ -125,14 +125,26 @@ class AccountController
 			$account[] = $_POST["account"];
 		if(isset($_POST["password"]))
 			$account[] = $_POST["password"];
-		if(isset($_POST["active"]))
-			$account[] = $_POST["active"];
 		if(isset($_POST["id"]))
 			$account[] = $_POST["id"];
 
 		$account_model = new AccountModel();
 		$account_model->update($account);
 		// header("Location: admin.php?route=accounts");
+		self::all();
+	}
+
+	public function lock()
+	{
+		$account = array();
+
+		if(isset($_POST["active"]))
+			$account[] = $_POST["active"];
+		if(isset($_POST["id"]))
+			$account[] = $_POST["id"];
+
+		$account_model = new AccountModel();
+		$account_model->lock($account);
 		self::all();
 	}
 

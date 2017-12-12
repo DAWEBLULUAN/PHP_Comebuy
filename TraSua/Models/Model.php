@@ -15,7 +15,7 @@ class Model
 
 			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', 'mysql');
 			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			// $this->conn->query('set names "utf8"');	
+			// $this->conn->query('set names "utf8"');
 		} catch (Exception $e) {
 			$e->getMessage();
 			die();

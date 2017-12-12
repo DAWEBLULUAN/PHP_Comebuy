@@ -57,7 +57,8 @@
 							<li class="menu-item"><a href="#">Menu1</a></li>
 						</ul>
 					</li>
-
+					
+					<?php if($_SESSION["account_type"] == 'LTK001') { ?>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Accounts <b class="caret"></b></a>
 
@@ -68,6 +69,7 @@
 							<li class="menu-item"><a href="#">Menu1</a></li>
 						</ul>
 					</li>
+					<?php } ?>
 
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Orders <b class="caret"></b></a>
@@ -112,7 +114,7 @@
 				
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="admin.php"><i class="fa fa-refresh" aria-hidden='true'></i> Refresh</a></li>
-					<li><a href=""><i class="fa fa-user"></i> Vũ Minh Luân</a></li>
+					<li><a href=""><i class="fa fa-user"></i> <?php echo $_SESSION["username"]; ?></a></li>
 					<li><a href="account.php?route=signout"><i class="fa fa-sign-out"></i> Sign out</a></li>
 				</ul>
 

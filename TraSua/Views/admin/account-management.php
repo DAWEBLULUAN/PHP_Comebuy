@@ -9,12 +9,20 @@
 
 		<div class="col-xs-12 col-lg-4 one-order">
 			<div class="w3-card-4">
-				<form action="" method="post">
+				<div>
 			    <header class="w3-container w3-light-grey w3-display-container">
-			      <h4><?=$result->ten_loai_tk?></h4>
-			      <span class="status" id='' data-active='<?= $result->trang_thai ?>' style='display: <?php if($result->trang_thai == 0) echo "none" ?>' class="lock-or-unlock"><i class="w3-display-topright fa fa-lock" style="right:5px; top: 5px;" aria-hidden="true"></i></span>
+			      <h4>
+			      	<span><?=$result->ten_loai_tk?></span>
+			      	<?php if(!$result->trang_thai) { ?>
+			      	<i class="w3-text-red fa fa-ban" aria-hidden='true'></i>
+			      	<?php } ?>
+			      </h4>
 
-			      <span class="status" data-active='<?= $result->trang_thai ?>' style='display: <?php if($result->trang_thai == 1) echo "none" ?>' class="lock-or-unlock"><i class="w3-display-topright fa fa-unlock" style="right:5px; top: 5px;" aria-hidden="true"></i></span>
+			      <?php if($result->loai_tai_khoan != 'LTK001') { ?>
+			      <span title="Lock the account" data-id='<?= $result->id ?>' data-active='<?= $result->trang_thai ?>' class="lock-or-unlock"><i class="w3-display-topright w3-display-hover fa <?php if($result->trang_thai) echo 'fa-lock'; else echo 'fa-unlock' ?>" aria-hidden="true"></i></span>
+						
+						<?php } ?>
+
 			    </header>
 			    <div class="w3-container">
 			    	<br>
@@ -39,14 +47,14 @@
 			    </div>
 			    <br>
 
-					<div class="w3-container">
-				    <button class="w3-button w3-dark-grey">Upgrade</button>
-				    <button class="w3-button w3-dark-grey">Downgrade</button>
+					<div class="w3-container <?php if($result->loai_tai_khoan == 'LTK001') echo 'admin' ?>">
+						<button class="w3-button w3-dark-grey upgrade-account" data-type='<?= $result->loai_tai_khoan ?>' data-id='<?= $result->id ?>' onclick='javascript: alert(this.className);'>Upgrade</button>
+				    <button class="w3-button w3-dark-grey downgrade-account" data-type='<?= $result->loai_tai_khoan ?>' data-id='<?= $result->id ?>'>Downgrade</button>
 			    </div>
 			    <br>
 			    
 			    <a style="text-decoration: none;" class="w3-button w3-block w3-dark-grey" onclick='document.getElementById(<?php echo json_encode($result->id) ?>).style.display="block"'>View</a>
-		    </form>
+		    </div>
 		  </div>
 		</div>
 		
@@ -116,13 +124,6 @@
 							<input type="date" class="form-control" id="created-day" placeholder="Enter password" name="created_day" value='<?php echo date('Y-m-d',strtotime($result->ngay_tao)) ?>'>
 						</div>
 					</div>
-					<!-- <div class="form-group"> 
-						<div class="col-sm-offset-3 col-sm-9">
-							<div class="checkbox">
-								<label><input class="active<?php  $result->id ?>" type="checkbox" <?php if($result->trang_thai) ; ?> value='active'> Active</label>
-							</div>
-						</div>
-					</div> -->
 
 
 
@@ -230,57 +231,87 @@
 		margin:auto;background-color:#fff;position:relative;padding:0;outline:0;
 	}
 
-	.status{
+	.lock-or-unlock{
 		cursor: pointer;
+	}
+
+	.lock-or-unlock i{
+		right:10px; top: 10px;
+	}
+
+	.admin{
+		pointer-events: none;
+		opacity: 0;
 	}
 
 </style>
 
 
 <script>
+
 	$(document).ready(function() {
+
+		// Update Account
 		$("button.update-account").click(function() {
 			id = $(this).attr('data-id');
 			account = $(".account_id"+id).val();
 			password = $(".password"+id).val();
-			active = 0;
-			if($(".active"+id).attr('checked')) {
-				active = 1;
-			}
-			$.post('account.php?route=update', {id: id, account: account, password: password, active: active}, function(data) {
+			$.post('account.php?route=update', {id: id, account: account, password: password}, function(data) {
 				alert("Updated");
 				$("#page-content").html(data);
 			});
 		});
+
+		// Lock or Unlock the account
+		$("span.lock-or-unlock").click(function() {
+			message = "";
+			// active = ($(this).attr('data-active') == 1 ? 0:1);
+			if($(this).attr('data-active') == 1) {
+				active = 0;
+				message = "Locked the account";
+			} else {
+				active = 1;
+				message = "Unlocked the account";
+			}
+			// alert(active + " " + message);
+			id = $(this).attr('data-id');
+			$.post('account.php?route=lock', {id: id, active:active }, function(data) {
+				alert(message);
+				$("#page-content").html(data);
+			});
+			
+		});
+
+		//Upgrade
+		$("button.upgrade-account").click(function() {
+		});
+
+		//Downgrade
+
 	});
 
+	
 
-	function onblurFunction(x) {
-		if(x.value == "")
-			x.type = 'text';
+
+
+	// Modal
+	document.getElementsByClassName("tablink")[0].click();
+	function openCity(evt, cityName) {
+		var i, x, tablinks;
+		x = document.getElementsByClassName('city');
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < x.length; i++) {
+			tablinks[i].classList.remove("w3-grey");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.classList.add("w3-grey");
 	}
 
-	// document.getElementsByClassName("tablink")[0].click();
 
-
-
-// Modal
-function openCity(evt, cityName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName('city');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].classList.remove("w3-grey");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.classList.add("w3-grey");
-}
-
-
-// End Modal
+	// End Modal
 
 
 </script>

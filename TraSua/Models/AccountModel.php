@@ -48,7 +48,14 @@ class AccountModel extends Model
 
 	public function update($options)
 	{
-		$query = "UPDATE tai_khoan SET ten_tk = ?, mat_khau = ?, trang_thai = ? WHERE id = ?";
+		$query = "UPDATE tai_khoan SET ten_tk = ?, mat_khau = ? WHERE id = ?";
+		$this->setQuery($query);
+		return ($this->execute($options)->rowCount() > 0);
+	}
+
+	public function lock($options)
+	{
+		$query = "UPDATE tai_khoan SET trang_thai = ? WHERE id = ?";
 		$this->setQuery($query);
 		return ($this->execute($options)->rowCount() > 0);
 	}

@@ -69,7 +69,7 @@ class C_cart
 	public function emptyCart()
 	{
 		if (isset($_SESSION["s_cart"])) {
-			session_unset($_SESSION["s_cart"]);
+			unset($_SESSION["s_cart"]);
 		}
 	}
 	public function updateCart()
