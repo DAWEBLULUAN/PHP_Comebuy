@@ -48,8 +48,10 @@
 			    <br>
 
 					<div class="w3-container <?php if($result->loai_tai_khoan == 'LTK001') echo 'admin' ?>">
-						<button class="w3-button w3-dark-grey upgrade-account" data-type='<?= $result->loai_tai_khoan ?>' data-id='<?= $result->id ?>' onclick='javascript: alert(this.className);'>Upgrade</button>
-				    <button class="w3-button w3-dark-grey downgrade-account" data-type='<?= $result->loai_tai_khoan ?>' data-id='<?= $result->id ?>'>Downgrade</button>
+						<button class="w3-button w3-dark-grey change-type" data-action='upgrade' data-type='<?= $result->loai_tai_khoan ?>' data-id='<?= $result->id ?>'>Upgrade</button>
+						<?php if($result->loai_tai_khoan == 'LTK002') { ?>
+				    <button class="w3-button w3-dark-grey change-type" data-action='downgrade' data-type='<?= $result->loai_tai_khoan ?>' data-id='<?= $result->id ?>'>Downgrade</button>
+				    <?php } ?>
 			    </div>
 			    <br>
 			    
@@ -119,9 +121,9 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-sm-3" for="created-day">Created date:</label>
+						<label class="control-label col-sm-3" >Created date:</label>
 						<div class="col-sm-9">          
-							<input type="date" class="form-control" id="created-day" placeholder="Enter password" name="created_day" value='<?php echo date('Y-m-d',strtotime($result->ngay_tao)) ?>'>
+							<input type="text" class="form-control"  placeholder="Enter password" name="created_day" value='<?php echo date('d-m-Y',strtotime($result->ngay_tao)) ?>'>
 						</div>
 					</div>
 
@@ -139,7 +141,7 @@
 
 			<div id='<?php echo $result->id."private-information"; ?>' class="w3-container city">
 				<h1 class="text-center">Private Infomation</h1>
-				<form class="form-horizontal" action="/action_page.php">
+				<form class="form-horizontal">
 
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="name">Full name:</label>
@@ -184,10 +186,11 @@
 							<input type="text" class="form-control" id="address" placeholder="Enter password" name="address" value='<?= $result->dia_chi ?>'>
 						</div>
 					</div>
+
 					<!-- Button Update Information -->
 					<div class="form-group">        
 						<div class="col-sm-offset-3 col-sm-9">
-							<button type="submit" class="btn btn-default">Update</button>
+							<button type="submit" class="btn btn-default update-user" data-id='<?php echo $result->ma_nguoi_dung ?>'>Update</button>
 						</div>
 					</div>
 					<!-- Button Update Information -->
@@ -262,6 +265,18 @@
 			});
 		});
 
+
+		//Update User Information:
+		$("button.update-user").click(function() {
+			user_id = $(this).attr('data-id');
+			
+		});
+
+
+
+
+
+
 		// Lock or Unlock the account
 		$("span.lock-or-unlock").click(function() {
 			message = "";
@@ -282,11 +297,31 @@
 			
 		});
 
-		//Upgrade
-		$("button.upgrade-account").click(function() {
+		//Upgrade or Downgrade.
+		$("button.change-type").click(function() {
+			id = $(this).attr('data-id');
+			type = $(this).attr('data-type');
+			action = $(this).attr('data-action');
+			// alert(action);
+			if(type == 'LTK002' && action == 'upgrade') {
+				result = confirm("Wanna upgrade this account to Administrator? Be careful because the current Administrator account will be downgraded.");
+				if(result) {
+					$.post('account.php?route='+action, {id: id, type: type}, function(data) {
+						/*optional stuff to do after success */
+						$("#page-content").html(data);
+					});
+				}
+			}
+			else {
+				$.post('account.php?route='+action, {id: id, type: type}, function(data) {
+					/*optional stuff to do after success */
+					$("#page-content").html(data);
+				});
+			}
+			
 		});
 
-		//Downgrade
+		//End Upgrade or Downgrade.
 
 	});
 

@@ -145,6 +145,52 @@ class AccountController
 
 		$account_model = new AccountModel();
 		$account_model->lock($account);
+
+		self::all();
+	}
+
+	//Upgrade
+	public function upgrade()
+	{
+		$type = "";
+		if(isset($_POST["type"])) {
+			$type = $_POST["type"];
+			switch ($type) {
+				case 'LTK003':
+					$account[] = 'LTK002';
+					break;
+				
+				case 'LTK002':
+					$account[] = 'LTK001';
+					break;
+			}
+		}
+		if(isset($_POST["id"]))
+			$account[] = $_POST["id"];
+
+		$account_model = new AccountModel();
+		$account_model->changeType($account);
+		// print_r($account);
+		self::all();
+	}
+
+	public function downgrade()
+	{
+		$type = "";
+		if(isset($_POST["type"])) {
+			$type = $_POST["type"];
+			switch ($type) {
+				case 'LTK002':
+					$account[] = 'LTK003';
+					break;
+			}
+		}
+
+		if(isset($_POST["id"]))
+			$account[] = $_POST["id"];
+
+		$account_model = new AccountModel();
+		$account_model->changeType($account);
 		self::all();
 	}
 

@@ -60,4 +60,11 @@ class AccountModel extends Model
 		return ($this->execute($options)->rowCount() > 0);
 	}
 
+	public function changeType($options)
+	{
+		$query = "UPDATE tai_khoan SET loai_tai_khoan = ? WHERE id = ?";
+		$this->setQuery($query);
+		return ($this->execute($options)->rowCount() > 0);
+	}
+
 }

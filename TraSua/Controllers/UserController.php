@@ -99,13 +99,12 @@
 
 			$user[] = $_POST["user_id"];
 
-			// print_r($user);
 			$user_model = new UserModel();
 			$update_result = $user_model->update($user);
-			// echo $update_result;
-			header('Location: user.php?route=profile');
-		}
 
+			self::a(1);
+			// header('Location: user.php?route=profile');
+		}
 
 
 	}

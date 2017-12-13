@@ -13,12 +13,10 @@ class Model
 		try {
 
 
-			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', '');
+			$this->conn = new PDO('mysql:host=localhost;dbname=comebuy;charset=utf8', 'root', 'mysql');
 			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			// $this->conn->query('set names "utf8"');
-		} catch (Exception $e) {
-			$e->getMessage();
-			die();
+		} catch (PDOException $e) {
+			die("Can not connect to database: ".$e->getMessage());
 		}
 	} //End
 
