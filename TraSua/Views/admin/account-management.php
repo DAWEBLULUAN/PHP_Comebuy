@@ -19,7 +19,7 @@
 			      </h4>
 
 			      <?php if($result->loai_tai_khoan != 'LTK001') { ?>
-			      <span title="Lock the account" data-id='<?= $result->id ?>' data-active='<?= $result->trang_thai ?>' class="lock-or-unlock"><i class="w3-display-topright w3-display-hover fa <?php if($result->trang_thai) echo 'fa-lock'; else echo 'fa-unlock' ?>" aria-hidden="true"></i></span>
+			      <span title="<?php if($result->trang_thai) echo 'Lock'; else echo 'Unlock' ?> the account" data-id='<?= $result->id ?>' data-active='<?= $result->trang_thai ?>' class="lock-or-unlock"><i class="w3-display-topright w3-display-hover fa <?php if($result->trang_thai) echo 'fa-lock'; else echo 'fa-unlock' ?>" aria-hidden="true"></i></span>
 						
 						<?php } ?>
 
@@ -72,17 +72,18 @@
 <div class="row">
 	<div class="col-xs-8 col-xs-offset-2 my-pagination">
 		<ul class="pagination">
-	    <li class="page-item my-previous-page"><a class="page-link">Previous</a></li>
-	    <li class="page-item my-page-item active"><a class="page-link" href="#">1</a></li>
-	    <li class="page-item my-page-item"><a class="page-link" href="#">2</a></li>
-	    <li class="page-item my-page-item"><a class="page-link" href="#">3</a></li>
-	    <li class="page-item my-next-page"><a class="page-link">Next</a></li>
+	    <li class="page-item my-previous-page"><a class="page-link"><i class="fa fa-long-arrow-left"></i></a></li>
+	    <li class="page-item my-next-page"><a class="page-link">
+	    	<span class="current-page">1</span>/
+	    	<span class="total-page">4</span>
+	    </a></li>
+	    <li class="page-item my-next-page"><a class="page-link"><i class="fa fa-long-arrow-right"></i></a></li>
 	  </ul>
 	</div>
 </div>
 
 
-<!-- Modal Popup -->
+<!-- MODAL Popup -->
 <div class="container">
 	<?php
 
@@ -139,6 +140,7 @@
 				</div>
 			</div>
 
+			<!-- User Information -->
 			<div id='<?php echo $result->id."private-information"; ?>' class="w3-container city">
 				<h1 class="text-center">Private Infomation</h1>
 				<form class="form-horizontal">
@@ -146,15 +148,15 @@
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="name">Full name:</label>
 						<div class="col-sm-9">
-							<input type="email" class="form-control" id="name" placeholder="Enter account" name="name" value='<?= $result->ten_nguoi_dung ?>'>
+							<input type="email" class="form-control" id="name<?= $result->ma_nguoi_dung  ?>" placeholder="Enter account" name="name" value='<?= $result->ten_nguoi_dung ?>'>
 						</div>
 					</div>
 
 					<div class="form-group"> 
 						<div class="col-sm-offset-3 col-sm-9">
 							<div class="radio">
-								<label><input type="radio" name="gender" <?php if($result->gioi_tinh) echo "checked" ?>> Male</label>
-								<label><input type="radio" name="gender" <?php if($result->gioi_tinh != null && $result->gioi_tinh == false) echo "checked" ?>> Female</label>
+								<label><input id="male<?= $result->ma_nguoi_dung  ?>" type="radio" name="gender" <?php if($result->gioi_tinh) echo "checked" ?>> Male</label>
+								<label><input id="female<?= $result->ma_nguoi_dung  ?>" type="radio" name="gender" <?php if($result->gioi_tinh != null && $result->gioi_tinh == false) echo "checked" ?>> Female</label>
 							</div>
 						</div>
 					</div>
@@ -162,28 +164,28 @@
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="birthday">Birthday:</label>
 						<div class="col-sm-9">
-							<input type="date" class="form-control" id="birthday" placeholder="Enter account" name="birthday" value='<?php if($result->ngay_sinh) echo date('Y-m-d', strtotime($result->ngay_sinh)) ?>'>
+							<input type="date" class="form-control" id="birthday<?= $result->ma_nguoi_dung  ?>" placeholder="Enter account" name="birthday" value='<?php if($result->ngay_sinh) echo date('Y-m-d', strtotime($result->ngay_sinh)) ?>'>
 						</div>
 					</div>
 
 					<div class="form-group">
 				    <label class="control-label col-sm-3" for="email">Email:</label>
 				    <div class="col-sm-9">
-				      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value='<?= $result->email ?>'>
+				      <input type="email" class="form-control" id="email<?= $result->ma_nguoi_dung  ?>" placeholder="Enter email" name="email" value='<?= $result->email ?>'>
 				    </div>
 				  </div>
 
 					<div class="form-group">
 						<label class="control-label col-sm-3" for=phone">Phone number:</label>
 						<div class="col-sm-9">          
-							<input type="text" class="form-control" id="phone" placeholder="Enter password" name="phone" value='<?= $result->so_dien_thoai ?>'>
+							<input type="text" class="form-control" id="phone<?= $result->ma_nguoi_dung  ?>" placeholder="Enter password" name="phone" value='<?= $result->so_dien_thoai ?>'>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="address">Address:</label>
 						<div class="col-sm-9">          
-							<input type="text" class="form-control" id="address" placeholder="Enter password" name="address" value='<?= $result->dia_chi ?>'>
+							<input type="text" class="form-control" id="address<?= $result->ma_nguoi_dung  ?>" placeholder="Enter password" name="address" value='<?= $result->dia_chi ?>'>
 						</div>
 					</div>
 
@@ -198,6 +200,8 @@
 
 
 			</div>
+
+			<!-- End User Information -->
 
 			<div class="w3-container w3-light-grey w3-padding">
 				<button class="w3-button w3-right w3-white w3-border" 
@@ -214,41 +218,6 @@
 </div>
 <!-- End Modal Popup -->
 	
-<style>
-	.one-order{
-		height: auto;
-	}
-	.w3-card-4{
-		margin: 10px 0px;
-	}
-	.my-pagination{
-		text-align  : center;
-		user-select : none;
-	}
-	.my-previous-page a, .my-next-page a{
-		cursor: pointer;
-	}
-
-
-	.my-modal-content {
-		margin:auto;background-color:#fff;position:relative;padding:0;outline:0;
-	}
-
-	.lock-or-unlock{
-		cursor: pointer;
-	}
-
-	.lock-or-unlock i{
-		right:10px; top: 10px;
-	}
-
-	.admin{
-		pointer-events: none;
-		opacity: 0;
-	}
-
-</style>
-
 
 <script>
 
@@ -269,7 +238,26 @@
 		//Update User Information:
 		$("button.update-user").click(function() {
 			user_id = $(this).attr('data-id');
-			
+
+			name = $("#name"+user_id).val();
+			gender = ($('#male'+user_id).is(':checked')? 1 : 0);
+			birthday = $("#birthday"+user_id).val();
+			email = $("#email"+user_id).val();
+			phone = $("#phone"+user_id).val();
+			address = $("#address"+user_id).val();
+
+			$.post('user.php?route=updateByAdmin', {
+					name: name,
+					gender: gender,
+					birthday: birthday,
+					phone: phone,
+					email: email,
+					address: address,
+					user_id: user_id
+				}, function(data) {
+				alert("Information updated");
+			});
+
 		});
 
 
@@ -280,7 +268,6 @@
 		// Lock or Unlock the account
 		$("span.lock-or-unlock").click(function() {
 			message = "";
-			// active = ($(this).attr('data-active') == 1 ? 0:1);
 			if($(this).attr('data-active') == 1) {
 				active = 0;
 				message = "Locked the account";
@@ -288,7 +275,6 @@
 				active = 1;
 				message = "Unlocked the account";
 			}
-			// alert(active + " " + message);
 			id = $(this).attr('data-id');
 			$.post('account.php?route=lock', {id: id, active:active }, function(data) {
 				alert(message);
@@ -302,19 +288,20 @@
 			id = $(this).attr('data-id');
 			type = $(this).attr('data-type');
 			action = $(this).attr('data-action');
+			message = ((action == 'upgrade') ? 'Upgraded the account' : 'Downgraded the account');
 			// alert(action);
 			if(type == 'LTK002' && action == 'upgrade') {
 				result = confirm("Wanna upgrade this account to Administrator? Be careful because the current Administrator account will be downgraded.");
 				if(result) {
 					$.post('account.php?route='+action, {id: id, type: type}, function(data) {
-						/*optional stuff to do after success */
+						alert(message);
 						$("#page-content").html(data);
 					});
 				}
 			}
 			else {
 				$.post('account.php?route='+action, {id: id, type: type}, function(data) {
-					/*optional stuff to do after success */
+					alert(message);
 					$("#page-content").html(data);
 				});
 			}

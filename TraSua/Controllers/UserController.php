@@ -30,32 +30,30 @@
 		{
 			//sup means sign-up;
 			//Thiếu : Validate dữ liệu
+			// $_SESSION["user_info"] = array($new_account_id, $_POST["sup_name"], $_POST["sup_phone"], $_POST["sup_address"]);
 			$user = array(); // tạo user
 
 			$new_id = self::autoGenerateUserId();
 			
 			$user[] = $new_id;
 
-			if(isset($_POST["sup_name"]))
-				$user[] = $_POST["sup_name"];
+			$user[] = $_SESSION["user_info"][1]; // Tên người dùng
 
-			if(isset($_POST["sup_phone"]))
-				$user[] = $_POST["sup_phone"];
+			$user[] = $_SESSION["user_info"][0]; // Mã tài khoản (foreign key)
 
-			if(isset($_POST["sup_address"]))
-				$user[] = $_POST["sup_address"];
+			$user[] = $_SESSION["user_info"][2]; // Số điện thoại
 
-			// print_r($user);
+			$user[] = $_SESSION["user_info"][3]; // Địa chỉ
+
+			print_r($user);
+			
 			$user_model = new UserModel();
 
 			if($user_model->create($user)) {
-				$_SESSION["account_info"] = array($new_id, $_POST["sup_username"], $_POST["sup_password"]);
-				header('Location: account.php?route=signup');
+				unset($_SESSION["user_info"]);
+				header('Location: account.php');
 			}
 
-			
-
-			// 	require 'account.php?route=signup';
 		}
 
 
@@ -76,7 +74,7 @@
 			return $user_id .= $number;
 		}
 
-		public function update()
+		public function recreate()
 		{
 			$user = array();
 			
@@ -98,12 +96,25 @@
 				$user[]  = $_POST["address"];
 
 			$user[] = $_POST["user_id"];
+			return $user;
+		}
 
+		public function updateProfile()
+		{
+			$user = self::recreate();
+			
 			$user_model = new UserModel();
 			$update_result = $user_model->update($user);
 
-			self::a(1);
-			// header('Location: user.php?route=profile');
+			header('Location: user.php?route=profile');
+		}
+
+		public function updateByAdmin()
+		{
+			$user = self::recreate();
+			
+			$user_model = new UserModel();
+			$update_result = $user_model->update($user);
 		}
 
 

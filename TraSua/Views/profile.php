@@ -57,7 +57,7 @@
 		
 		<div class="personal-infomation">
 			<h3>Private infomation</h3>
-		  <form action="user.php?route=update" method = 'post'>
+		  <form action="user.php?route=updateProfile" method = 'post'>
 
 		    <div class="my-form-control">      
 		      <input class="my-input" type="text" name='name' value="<?= $user->ten_nguoi_dung?>" required>

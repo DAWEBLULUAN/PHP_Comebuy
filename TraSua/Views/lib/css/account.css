@@ -1,0 +1,31 @@
+.one-order{
+		height: auto;
+	}
+	.w3-card-4{
+		margin: 10px 0px;
+	}
+	.my-pagination{
+		text-align  : center;
+		user-select : none;
+	}
+	.my-previous-page a, .my-next-page a{
+		cursor: pointer;
+	}
+
+
+	.my-modal-content {
+		margin:auto;background-color:#fff;position:relative;padding:0;outline:0;
+	}
+
+	.lock-or-unlock{
+		cursor: pointer;
+	}
+
+	.lock-or-unlock i{
+		right:10px; top: 10px;
+	}
+
+	.admin{
+		pointer-events: none;
+		opacity: 0;
+	}

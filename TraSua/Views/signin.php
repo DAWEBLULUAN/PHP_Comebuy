@@ -15,7 +15,7 @@
 <div class="w3-content">
 	<!-- Sign-in form -->
 	<div class="my-content">
-		<h1>Sign-in</h1><br>
+		<h1 id="div">Sign-in</h1><br>
 	  <div class="my-form" id="signin-form">
 		  <form action="account.php?route=signin" method="POST">
 		    <div class="my-form-control">    

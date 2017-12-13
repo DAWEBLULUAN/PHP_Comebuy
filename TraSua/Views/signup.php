@@ -20,7 +20,7 @@
 	<div class="my-content">
 		<h1>Sign-up</h1><br>
 	  <div class="my-form" id="signin-form">
-		  <form action="user.php?route=create" method="post">
+		  <form action="account.php?route=signup" method="post">
 
 				<div class="my-form-control">
 		      <input type="text" name="sup_name" required>
@@ -35,13 +35,13 @@
 		    </div>
 		      
 		    <div class="my-form-control">      
-		      <input type="text" name="sup_password" required>
+		      <input type="password" name="sup_password" required>
 		      <span class="my-bar"></span>
 		      <label>Password</label>
 		    </div>
 
 		    <div class="my-form-control">      
-		      <input type="text" name="sup_reenter_password" required>
+		      <input type="password" name="sup_reenter_password" required>
 		      <span class="my-bar"></span>
 		      <label>Re-enter password</label>
 		    </div>
@@ -60,6 +60,7 @@
 		    <div><a href="account.php" id="signup-link">Sign in</a></div>
 			  <br>
 			  <div><input type="submit" class="w3-btn w3-block w3-red w3-hover-black" value="Sign up"></div>
+			  <input type="hidden" name="create" value='1'>
 		  </form>
 	  </div>
   </div>

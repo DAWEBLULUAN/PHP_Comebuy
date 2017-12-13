@@ -10,9 +10,10 @@
 	<link rel="stylesheet" href="Views/lib/css/FA/font-awesome.css">
 	<link rel="stylesheet" href="Views/lib/css/W3/W3.css">
 	<link rel="stylesheet" href="Views/lib/css/admin-masterpage.css">
+	<link rel="stylesheet" href="Views/lib/css/account.css">
 
-	<style>
-		.dropdown-submenu {
+	<!-- <style>
+		/*.dropdown-submenu {
     	position: relative;
 		}
 		.dropdown-submenu .submenu-title {
@@ -22,8 +23,8 @@
 			top        : 0;
 			left       : 100%;
 			margin-top : -1px;
-		}
-	</style>
+		}*/
+	</style> -->
 </head>
 <body>
 

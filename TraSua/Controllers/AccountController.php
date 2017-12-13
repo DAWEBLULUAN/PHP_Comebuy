@@ -26,36 +26,36 @@ class AccountController
 
 	public function signup()
 	{
-		//sup means sign-up;
-		if(isset($_SESSION["account_info"])) {
-			// echo $_POST["sup_name"];
-			$user_id =  $_SESSION["account_info"][0];
-			$username = $_SESSION["account_info"][1];
-			$password =  $_SESSION["account_info"][2];
-			session_unset($_SESSION["account_info"]);
-
+		if(isset($_POST["create"])) {
 			$account = array();
 
-			$new_account_id =  self::autoGenerateAccountId();
+			$new_account_id = self::autoGenerateAccountId();
 			$account[] = $new_account_id;
-			$account[] = $username;
-			$account[] = $password;
+			if(isset($_POST["sup_username"]))
+					$account[] = $_POST["sup_username"];
+			if(isset($_POST["sup_password"]))
+				$account[] = $_POST["sup_password"];
+
 			$account[] = "LTK003";
-			$account[] = $user_id;
 			$account[] = date("Y-m-d");
 			$account[] = 1;
+
+			// print_r($account);
 
 			$account_model = new AccountModel();
 
 			if($account_model->create($account)) {
-				setcookie("username", $username, time() + (3600*3), "/");
-				setcookie("password", $password, time() + (3600*3), "/");
+				setcookie("username", $account[1], time() + (3600*3), "/");
+				setcookie("password", $account[2], time() + (3600*3), "/");
 
-				header('Location: account.php');
+				$_SESSION["user_info"] = array($new_account_id, $_POST["sup_name"], $_POST["sup_phone"], $_POST["sup_address"]);
+
+				// print_r($_SESSION["user_info"]);
+
+				header('Location: user.php?route=create');
 			}
-		}
-		else
-			require 'Views/signup.php';
+		} else require 'Views/signup.php';
+
 	}
 
 	

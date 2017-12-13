@@ -32,7 +32,7 @@ class AccountModel extends Model
 
 	public function create($options)
 	{
-		$query = "INSERT INTO tai_khoan VALUES(?, ?, ?, ?, ?, ?, ?)";
+		$query = "INSERT INTO tai_khoan VALUES(?, ?, ?, ?, ?, ?)";
 		$this->setQuery($query);
 		return ($this->execute($options)->rowCount() > 0);
 	}
