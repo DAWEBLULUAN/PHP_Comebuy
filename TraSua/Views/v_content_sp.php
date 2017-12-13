@@ -81,7 +81,8 @@
 			<!-- Prices -->
 			<div class="price"><center><?php echo $sp->gia_ban ?><sup>đ</sup>
 <!--  -->
-				<a class="myBtn" ><button  type="button" onclick='ThemSanPhamVaoGioHang(<?php echo json_encode($sp->ma_sp) ?>,
+				<a class="myBtn" ><button  type="button" onclick='ThemSanPhamVaoGioHang(
+					<?php echo json_encode($sp->ma_sp) ?>,
 					<?php echo json_encode($sp->ten_sp) ?>,
 					<?php echo json_encode('1') ?>,
 					<?php echo json_encode($sp->gia_ban) ?>,

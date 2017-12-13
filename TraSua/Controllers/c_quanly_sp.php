@@ -9,17 +9,30 @@ class C_qlsp
 
 	public  function edit()
 	{
+		$arUPSP = array();
+			
+			if(isset($_GET["tensp"]))
+				$arUPSP[]=$_GET["tensp"];
+			if(isset($_GET["maloaisp"]))
+				$arUPSP[]=$_GET["maloaisp"];
+			if(isset($_GET["hinhanh"]))
+				$arUPSP[]=$_GET["hinhanh"];
+			if(isset($_GET["giasp"]))
+				$arUPSP[]=$_GET["giasp"];
+			if(isset($_GET["gioithieu"]))
+				$arUPSP[]=$_GET["gioithieu"];
 			if(isset($_GET["masp"]))
-			{
+				$arUPSP[]=$_GET["masp"];
+		$Msp = new M_SanPham();
+		$ketqua = $Msp->Up_san_pham($arUPSP);
+		if ($ketqua) {
+			self::load_tat_ca_sp();
+					}
+					else 
+					{
+							echo  "up thất bại";
+					}			
 
-				$masp=$_GET["masp"];
-				$Csp= new M_SanPham();
-				$dsloaisp= $Csp->Doc_loai_san_pham();
-				$sp = $Csp-> Doc_mon_an_theo_ma_mon($masp);
-
-				require ("Views/admin/edit-products.php");
-
-			}	
 			
 	}
 	public function confirmEdit()
@@ -30,18 +43,47 @@ class C_qlsp
 	}
 	public function delete()
 	{
-		echo "Xóa thành công";
-	//	header("Location: quanly_sp.php");
+		
+	if (isset($_GET["masp"])) {
+		$masp= $_GET["masp"];
+		
+
+		$Dsp = new M_SanPham();
+		$ketqua = $Dsp->Xoa_san_pham($masp);
+		if ($ketqua) {
+			echo "Xóa thành công";
+			self::load_tat_ca_sp();
+		}
+	}
 	}
 
-
-
+	public function search()
+	{
+		self::load_tat_ca_sp();
+	}
 
 	public function load_tat_ca_sp()
 	{
-		$msp = new M_SanPham();
-		$san_pham= $msp->Doc_mon_an();
-		require("Views/admin/v_quanly_sp.php");
+		
+		if (isset($_GET["strTimKiem"])) {
+			$tukhoa = $_GET["strTimKiem"];
+			$msp = new M_SanPham();
+			$san_pham= $msp->Doc_mon_an_theo_tim_kiem($tukhoa);
+			$dsloaisp= $msp->Doc_loai_san_pham();
+			require("Views/admin/v_quanly_sp.php");
+			
+		}
+		else 
+		{
+			
+			$msp = new M_SanPham();
+			$san_pham= $msp->Doc_mon_an();
+			$dsloaisp= $msp->Doc_loai_san_pham();
+			require("Views/admin/v_quanly_sp.php");
+
+		}
+		
+		
 	}
 	
 	public function ThemSP()
@@ -84,7 +126,7 @@ class C_qlsp
 		// $msp = new M_SanPham();
 		// $san_pham= $msp->Doc_mon_an();
 		// require("Views/admin/v_quanly_sp.php");
-		echo "ABC";
+		
 	}
 }
 
